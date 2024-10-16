@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ComPortPLC" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ComPortDryScale" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ComportLiquidScale" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Silo1Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CORN FINE</Value>
+    </Setting>
+    <Setting Name="Silo2Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CORN FINE</Value>
+    </Setting>
+    <Setting Name="Silo3Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SOYA</Value>
+    </Setting>
+    <Setting Name="Silo4Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SOYA</Value>
+    </Setting>
+    <Setting Name="Silo5Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D1</Value>
+    </Setting>
+    <Setting Name="Silo6Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CORN COARSE</Value>
+    </Setting>
+    <Setting Name="Silo7Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CORN COARSE</Value>
+    </Setting>
+    <Setting Name="Silo8Material" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COPRA</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

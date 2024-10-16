@@ -1,0 +1,121 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MIGS Feed Batching System
+</name>
+</assembly>
+<members>
+<member name="T:MIGS_Feed_Batching_System.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources._STOP">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.BATCH">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.BOTTOM">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.CLEAR">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.DELETE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.DISCHARGE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.EDIT">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.LIQUID">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.LIQUID_AND_MIXER">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.MIX">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.REFRESH">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.RUN">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.SAVE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.SILOS">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.SPRAY">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.START">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.TOP">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>
