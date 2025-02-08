@@ -42,6 +42,11 @@ MIGS Feed Batching System
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.CONNECTED">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.DELETE">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -92,6 +97,11 @@ MIGS Feed Batching System
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.SETTING">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.SILOS">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -108,6 +118,11 @@ MIGS Feed Batching System
 </summary>
 </member>
 <member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MIGS_Feed_Batching_System.My.Resources.Resources.SUCCESS_100">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

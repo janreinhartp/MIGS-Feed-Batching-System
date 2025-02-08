@@ -54,6 +54,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>D:\Backup 7-10-24\Desktop\Migs Auto Dosing\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="EasyToast, Version=1.0.2307.111, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyToast.1.0.2307.111\lib\net40\EasyToast.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -131,6 +134,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Batching.vb" />
     <Compile Include="CRUD.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -164,10 +168,9 @@
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -239,6 +242,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\STOP_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONNECTED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RUN1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STOP_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BATCH1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOTTOM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLEAR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONNECTED1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DELETE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DISCHARGE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DISCONNECTED1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EDIT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LIQUID AND MIXER1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LIQUID1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIX1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REFRESH1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SAVE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SETTING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SILOS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPRAY1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\START1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STOP1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOP1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUCCESS-100.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

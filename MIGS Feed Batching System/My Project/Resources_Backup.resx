@@ -118,70 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RUN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RUN1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="STOP_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\STOP_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BATCH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BATCH1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BOTTOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BOTTOM1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CLEAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CLEAR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CONNECTED" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CONNECTED1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DELETE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DELETE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DISCHARGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DISCHARGE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DISCONNECTED" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DISCONNECTED1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EDIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EDIT1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LIQUID AND MIXER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LIQUID AND MIXER1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LIQUID" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LIQUID1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MIX" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MIX1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="REFRESH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REFRESH1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SAVE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SAVE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SETTING" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SETTING.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SILOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SILOS1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SPRAY" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SPRAY1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\SILOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="START" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\START1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\START.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="STOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\STOP1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CLEAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CLEAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DISCONNECTED" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DISCONNECTED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SPRAY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SPRAY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CONNECTED" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CONNECTED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BOTTOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BOTTOM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SAVE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SAVE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DELETE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DELETE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BATCH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BATCH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EDIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EDIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TOP1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\TOP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SUCCESS-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SUCCESS-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RUN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RUN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="REFRESH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REFRESH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LIQUID AND MIXER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LIQUID AND MIXER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STOP_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\STOP_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LIQUID" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LIQUID.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MIX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MIX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\STOP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DISCHARGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DISCHARGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

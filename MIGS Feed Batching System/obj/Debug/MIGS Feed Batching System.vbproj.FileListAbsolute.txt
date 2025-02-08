@@ -46,3 +46,6 @@ C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\
 C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\bin\Debug\nmodbuspc.dll
 C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\bin\Debug\log4net.dll
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\bin\Debug\EasyToast.dll
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\bin\Debug\EasyToast.pdb
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\bin\Debug\EasyToast.dll.config

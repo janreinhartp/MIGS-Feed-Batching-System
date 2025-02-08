@@ -231,4 +231,18 @@
         End If
     End Sub
 
+    Public Sub stopBatching()
+        Form1.commandPLC(0) = 0
+        Form1.commandPLC(1) = 0
+        Form1.commandPLC(2) = 0
+        Form1.commandPLC(3) = 0
+        Form1.commandPLC(4) = 0
+        Form1.commandPLC(5) = 0
+        Form1.commandPLC(6) = 0
+        Form1.commandPLC(7) = 0
+
+        Form1.commandPLC(8) = 0
+        Form1.commandPLC(9) = 0
+    End Sub
+
 End Module

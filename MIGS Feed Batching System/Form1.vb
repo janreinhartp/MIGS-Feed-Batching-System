@@ -1,11 +1,14 @@
 ﻿
 Imports System.IO.Ports
 Imports System.Net.Mail
+Imports System.Threading
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
 Imports Google.Protobuf.WellKnownTypes
 Imports Modbus.Device
 Imports Org.BouncyCastle.Tls
+
+Imports System.UI.Widget
 
 Delegate Sub SetTextCallback(ByVal [text] As String)
 Public Class Form1
@@ -80,7 +83,8 @@ Public Class Form1
         timeSpray = New Stopwatch()
         timeMixer = New Stopwatch()
         InitializeAddress()
-        loadScales()
+        connectPLC()
+        ' loadScales()
         tmrUiUpdate.Start()
     End Sub
 
@@ -172,7 +176,7 @@ Public Class Form1
             MsgBox("Please Contact the Administrator" + " " + ex.Message)
             'btnStartBatching.Enabled = False
         End Try
-        connectPLC()
+
     End Sub
 
 
@@ -242,6 +246,102 @@ Public Class Form1
         lblSilo8WeightBatching.Text = currentFormulaBatching.Silo8
         lblMolassesWeightBatching.Text = currentFormulaBatching.Molasses
         lblCocoOilWeightBatching.Text = currentFormulaBatching.CocoOil
+    End Sub
+    Public Sub CallToast(ByVal caption As String, ByVal description As String)
+        Dim toast = New ToastBuilder(Me).SetCaption(caption).SetDescription(description).SetDuration(5000).SetMuting(False).Build()
+        toast.Show()
+    End Sub
+
+
+
+
+    Private Async Sub btnStartStopBatching_Click(sender As Object, e As EventArgs) Handles btnStartStopBatching.Click
+        If dryCancellationTokenSource Is Nothing AndAlso liquidCancellationTokenSource Is Nothing Then
+            dryCancellationTokenSource = New CancellationTokenSource()
+            liquidCancellationTokenSource = New CancellationTokenSource()
+
+            statusDry = 1
+            statusWet = 1
+            currentTargetWeightDry = currentFormulaBatching.Silo1
+            currentTargetWeightWet = currentFormulaBatching.Molasses
+
+            lblCurrentSilo.Text = "Silo 1"
+            lblCurrentTargetWeightDry.Text = currentTargetWeightDry
+
+            lblCurrentPump.Text = "Coco Oil"
+            lblCurrentTargetWeightLiquid.Text = currentTargetWeightWet
+
+            btnDischarge.Enabled = False
+
+            ' Start both tasks asynchronously
+            Await Task.WhenAll(
+            DryMatsBatchingAsync(dryCancellationTokenSource.Token),
+            LiquidMatsBatchingAsync(liquidCancellationTokenSource.Token))
+
+            btnDischarge.Enabled = True
+            CallToast("Auto Batching", "Batching completed. Discharge is now available.")
+        Else
+            If dryCancellationTokenSource IsNot Nothing Then
+                dryCancellationTokenSource.Cancel()
+                dryCancellationTokenSource = Nothing
+            End If
+
+            If liquidCancellationTokenSource IsNot Nothing Then
+                liquidCancellationTokenSource.Cancel()
+                liquidCancellationTokenSource = Nothing
+            End If
+
+            stopBatching()
+            btnDischarge.Enabled = True
+            MsgBox("Batching stopped.")
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim currentValue As Integer
+        If Integer.TryParse(TextBox1.Text, currentValue) Then
+            currentValue -= 1
+            TextBox1.Text = currentValue.ToString()
+            binCurrentLoadDry = CDbl(currentValue)
+        Else
+            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim currentValue As Integer
+        If Integer.TryParse(TextBox1.Text, currentValue) Then
+            currentValue += 1
+            TextBox1.Text = currentValue.ToString()
+            binCurrentLoadDry = CDbl(currentValue)
+        Else
+            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+
+
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim currentValue As Integer
+        If Integer.TryParse(TextBox2.Text, currentValue) Then
+            currentValue += 1
+            TextBox2.Text = currentValue.ToString()
+            binCurrentLoadWet = CDbl(currentValue)
+        Else
+            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim currentValue As Integer
+        If Integer.TryParse(TextBox2.Text, currentValue) Then
+            currentValue -= 1
+            TextBox2.Text = currentValue.ToString()
+            binCurrentLoadWet = CDbl(currentValue)
+        Else
+            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
     End Sub
 
     Private Sub tmrUiUpdate_Tick(sender As Object, e As EventArgs) Handles tmrUiUpdate.Tick
@@ -330,7 +430,7 @@ Public Class Form1
         Try
             If (IF_Connected = False) Then
                 IF_Connected = True
-                srlPLC = New SerialPort("COM5", 9600, Parity.None, 8, 1)
+                srlPLC = New SerialPort("COM10", 9600, Parity.None, 8, 1)
                 srlPLC.Open() 'Open 
                 Master_Station = ModbusSerialMaster.CreateRtu(srlPLC)
                 Master_Station.Transport.ReadTimeout = 500
@@ -462,15 +562,12 @@ Public Class Form1
                 IF_Connected = True
                 srlPLC.PortName = My.Settings.ComPortPLC
                 srlPLC = New SerialPort(My.Settings.ComPortPLC, 9600, Parity.None, 8, StopBits.One)
-                srlPLC.Open() 'Open 
-                'เมื่อ Port เปิด Port จะถูกกำหนดให้ เป็น  ModbusSerialMaster และเป็นแบบ RTU เท่านั้น
+                srlPLC.Open()
                 Master_Station = ModbusSerialMaster.CreateRtu(srlPLC)
                 Master_Station.Transport.ReadTimeout = 300
             ElseIf (IF_Connected = True) Then
-
+                pbPLC.Image = My.Resources.CONNECTED
             End If
-
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -485,11 +582,12 @@ Public Class Form1
             timeSpray.Stop()
             tmrSpray.Stop()
             lblTimerSprayRemain.Text = "00:00:00"
-            ' commandPLC(9) = 0
-            ' BtnBatchingDischarge.Enabled = True
+            btnSprayPump.color = Color.SeaGreen
+            btnDischarge.Enabled = True
+            commandPLC(9) = 0
         Else
             lblTimerSprayRemain.Text = remainingTime.ToString("hh\:mm\:ss")
-            'commandPLC(9) = 1
+            commandPLC(9) = 1
         End If
     End Sub
 
@@ -499,7 +597,7 @@ Public Class Form1
                 timeSpray.Reset()
                 timeSpray.Start()
                 tmrSpray.Start()
-                ' BtnBatchingDischarge.Enabled = False
+                btnDischarge.Enabled = False
             Else
                 MessageBox.Show("Invalid time format. Please enter time in the format 'hh:mm:ss'.")
             End If
@@ -509,6 +607,8 @@ Public Class Form1
             tmrSpray.Stop()
             lblTimerSprayRemain.Text = "00:00:00"
             btnSprayPump.color = Color.SeaGreen
+            btnDischarge.Enabled = True
+            commandPLC(9) = 0
         End If
 
     End Sub
@@ -521,7 +621,9 @@ Public Class Form1
             timeMixer.Stop()
             tmrMixer.Stop()
             lblTimeMixerRemain.Text = "00:00:00"
-            ' enableButtonMixing()
+            btnMixerTimer.color = Color.SeaGreen
+            btnTopGate.Enabled = True
+            btnBottomGate.Enabled = True
         Else
             lblTimeMixerRemain.Text = remainingTime.ToString("hh\:mm\:ss")
         End If
@@ -533,7 +635,8 @@ Public Class Form1
                 timeMixer.Reset()
                 timeMixer.Start()
                 tmrMixer.Start()
-                'disableButtonMixing()
+                btnTopGate.Enabled = False
+                btnBottomGate.Enabled = False
             Else
                 MessageBox.Show("Invalid time format. Please enter time in the format 'hh:mm:ss'.")
             End If
@@ -543,6 +646,8 @@ Public Class Form1
             tmrMixer.Stop()
             lblTimeMixerRemain.Text = "00:00:00"
             btnMixerTimer.color = Color.SeaGreen
+            btnTopGate.Enabled = True
+            btnBottomGate.Enabled = True
         End If
 
     End Sub

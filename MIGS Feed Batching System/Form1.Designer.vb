@@ -31,17 +31,50 @@ Partial Class Form1
         Me.srlDryScale = New System.IO.Ports.SerialPort(Me.components)
         Me.srlLiquidScale = New System.IO.Ports.SerialPort(Me.components)
         Me.pnlBatching = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmbFormulaBatching = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtbDryScaleStatus = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.pbLiquidScaleStatus = New System.Windows.Forms.PictureBox()
+        Me.pbDryScaleStatus = New System.Windows.Forms.PictureBox()
+        Me.pbPLC = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblTimerSprayRemain = New System.Windows.Forms.Label()
         Me.lblTimeMixerRemain = New System.Windows.Forms.Label()
         Me.txtbTimerSpray = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtBTimeMixer = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.btnSprayPump = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnBottomGate = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnMixerTimer = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnTopGate = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnDischarge = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnStartStopBatching = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnRefreshFormulaBatching = New Bunifu.Framework.UI.BunifuTileButton()
         Me.pnlDiagram = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.pbLiquidGate = New System.Windows.Forms.PictureBox()
+        Me.pbCocoOil = New System.Windows.Forms.PictureBox()
+        Me.pbMolasses = New System.Windows.Forms.PictureBox()
+        Me.pbSprayPump = New System.Windows.Forms.PictureBox()
+        Me.pbBottomGate = New System.Windows.Forms.PictureBox()
+        Me.pbTopGate = New System.Windows.Forms.PictureBox()
+        Me.pbBatchGate = New System.Windows.Forms.PictureBox()
+        Me.pbSilo8 = New System.Windows.Forms.PictureBox()
+        Me.pbSilo7 = New System.Windows.Forms.PictureBox()
+        Me.pbSilo6 = New System.Windows.Forms.PictureBox()
+        Me.pbSilo5 = New System.Windows.Forms.PictureBox()
+        Me.pbSilo4 = New System.Windows.Forms.PictureBox()
+        Me.pbSilo3 = New System.Windows.Forms.PictureBox()
+        Me.pbSilo2 = New System.Windows.Forms.PictureBox()
+        Me.pbSilo1 = New System.Windows.Forms.PictureBox()
         Me.Label65 = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.lblFormulaNameBatching = New System.Windows.Forms.Label()
@@ -92,9 +125,26 @@ Partial Class Form1
         Me.lblSilo1WeightBatching = New System.Windows.Forms.Label()
         Me.lblSilo1RawMatsBatching = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlFormula = New System.Windows.Forms.Panel()
+        Me.lblFormulaMatSilo8 = New System.Windows.Forms.Label()
+        Me.lblFormulaMatSilo7 = New System.Windows.Forms.Label()
+        Me.lblFormulaMatSilo6 = New System.Windows.Forms.Label()
+        Me.lblFormulaMatSilo5 = New System.Windows.Forms.Label()
+        Me.lblFormulaMatSilo4 = New System.Windows.Forms.Label()
+        Me.lblFormulaMatSilo3 = New System.Windows.Forms.Label()
+        Me.lblFormulaMatSilo2 = New System.Windows.Forms.Label()
+        Me.lblFormulaMatSilo1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbFormula = New System.Windows.Forms.ComboBox()
         Me.lblFormulaId = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
+        Me.btnClear = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnDeleteFormula = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnEditFormula = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnAddFormula = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnRefreshFormula = New Bunifu.Framework.UI.BunifuTileButton()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.txtbCocoOilWeight = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.Label46 = New System.Windows.Forms.Label()
@@ -120,54 +170,12 @@ Partial Class Form1
         Me.tmrUiUpdate = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSpray = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMixer = New System.Windows.Forms.Timer(Me.components)
-        Me.cmbFormulaBatching = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmbFormula = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblFormulaMatSilo1 = New System.Windows.Forms.Label()
-        Me.lblFormulaMatSilo2 = New System.Windows.Forms.Label()
-        Me.lblFormulaMatSilo4 = New System.Windows.Forms.Label()
-        Me.lblFormulaMatSilo3 = New System.Windows.Forms.Label()
-        Me.lblFormulaMatSilo6 = New System.Windows.Forms.Label()
-        Me.lblFormulaMatSilo5 = New System.Windows.Forms.Label()
-        Me.lblFormulaMatSilo8 = New System.Windows.Forms.Label()
-        Me.lblFormulaMatSilo7 = New System.Windows.Forms.Label()
-        Me.btnClear = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnDeleteFormula = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnEditFormula = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnAddFormula = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnRefreshFormula = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.pbLiquidGate = New System.Windows.Forms.PictureBox()
-        Me.pbCocoOil = New System.Windows.Forms.PictureBox()
-        Me.pbMolasses = New System.Windows.Forms.PictureBox()
-        Me.pbSprayPump = New System.Windows.Forms.PictureBox()
-        Me.pbBottomGate = New System.Windows.Forms.PictureBox()
-        Me.pbTopGate = New System.Windows.Forms.PictureBox()
-        Me.pbBatchGate = New System.Windows.Forms.PictureBox()
-        Me.pbSilo8 = New System.Windows.Forms.PictureBox()
-        Me.pbSilo7 = New System.Windows.Forms.PictureBox()
-        Me.pbSilo6 = New System.Windows.Forms.PictureBox()
-        Me.pbSilo5 = New System.Windows.Forms.PictureBox()
-        Me.pbSilo4 = New System.Windows.Forms.PictureBox()
-        Me.pbSilo3 = New System.Windows.Forms.PictureBox()
-        Me.pbSilo2 = New System.Windows.Forms.PictureBox()
-        Me.pbSilo1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.pbLiquidScaleStatus = New System.Windows.Forms.PictureBox()
-        Me.pbDryScaleStatus = New System.Windows.Forms.PictureBox()
-        Me.pbPLC = New System.Windows.Forms.PictureBox()
-        Me.btnSprayPump = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnBottomGate = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnMixerTimer = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnTopGate = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnDischarge = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnStartStopBatching = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnRefreshFormulaBatching = New Bunifu.Framework.UI.BunifuTileButton()
         Me.pnlBatching.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.pbLiquidScaleStatus, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbDryScaleStatus, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbPLC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlDiagram.SuspendLayout()
-        Me.pnlFormula.SuspendLayout()
         CType(Me.pbLiquidGate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCocoOil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbMolasses, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,9 +193,7 @@ Partial Class Form1
         CType(Me.pbSilo1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbLiquidScaleStatus, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbDryScaleStatus, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbPLC, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlFormula.SuspendLayout()
         Me.SuspendLayout()
         '
         'tmrPLC
@@ -222,6 +228,28 @@ Partial Class Form1
         Me.pnlBatching.Name = "pnlBatching"
         Me.pnlBatching.Size = New System.Drawing.Size(540, 1080)
         Me.pnlBatching.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Open Sans", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(52, 42)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(326, 41)
+        Me.Label1.TabIndex = 49
+        Me.Label1.Text = "Select Formula Batching:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cmbFormulaBatching
+        '
+        Me.cmbFormulaBatching.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbFormulaBatching.Font = New System.Drawing.Font("Open Sans SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbFormulaBatching.FormattingEnabled = True
+        Me.cmbFormulaBatching.Location = New System.Drawing.Point(52, 86)
+        Me.cmbFormulaBatching.MaxDropDownItems = 20
+        Me.cmbFormulaBatching.Name = "cmbFormulaBatching"
+        Me.cmbFormulaBatching.Size = New System.Drawing.Size(326, 36)
+        Me.cmbFormulaBatching.TabIndex = 23
         '
         'Panel1
         '
@@ -273,6 +301,36 @@ Partial Class Form1
         Me.Label6.TabIndex = 24
         Me.Label6.Text = "PLC STATUS"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'pbLiquidScaleStatus
+        '
+        Me.pbLiquidScaleStatus.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
+        Me.pbLiquidScaleStatus.Location = New System.Drawing.Point(424, 50)
+        Me.pbLiquidScaleStatus.Name = "pbLiquidScaleStatus"
+        Me.pbLiquidScaleStatus.Size = New System.Drawing.Size(40, 40)
+        Me.pbLiquidScaleStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbLiquidScaleStatus.TabIndex = 23
+        Me.pbLiquidScaleStatus.TabStop = False
+        '
+        'pbDryScaleStatus
+        '
+        Me.pbDryScaleStatus.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
+        Me.pbDryScaleStatus.Location = New System.Drawing.Point(228, 50)
+        Me.pbDryScaleStatus.Name = "pbDryScaleStatus"
+        Me.pbDryScaleStatus.Size = New System.Drawing.Size(40, 40)
+        Me.pbDryScaleStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbDryScaleStatus.TabIndex = 22
+        Me.pbDryScaleStatus.TabStop = False
+        '
+        'pbPLC
+        '
+        Me.pbPLC.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
+        Me.pbPLC.Location = New System.Drawing.Point(58, 50)
+        Me.pbPLC.Name = "pbPLC"
+        Me.pbPLC.Size = New System.Drawing.Size(40, 40)
+        Me.pbPLC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbPLC.TabIndex = 21
+        Me.pbPLC.TabStop = False
         '
         'Label3
         '
@@ -350,9 +408,148 @@ Partial Class Form1
         Me.txtBTimeMixer.Text = "5"
         Me.txtBTimeMixer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
+        'btnSprayPump
+        '
+        Me.btnSprayPump.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnSprayPump.color = System.Drawing.Color.SeaGreen
+        Me.btnSprayPump.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnSprayPump.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSprayPump.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnSprayPump.ForeColor = System.Drawing.Color.White
+        Me.btnSprayPump.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.SPRAY
+        Me.btnSprayPump.ImagePosition = 20
+        Me.btnSprayPump.ImageZoom = 25
+        Me.btnSprayPump.LabelPosition = 41
+        Me.btnSprayPump.LabelText = "SPRAY"
+        Me.btnSprayPump.Location = New System.Drawing.Point(279, 609)
+        Me.btnSprayPump.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnSprayPump.Name = "btnSprayPump"
+        Me.btnSprayPump.Size = New System.Drawing.Size(190, 120)
+        Me.btnSprayPump.TabIndex = 14
+        '
+        'btnBottomGate
+        '
+        Me.btnBottomGate.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnBottomGate.color = System.Drawing.Color.SeaGreen
+        Me.btnBottomGate.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnBottomGate.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBottomGate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnBottomGate.ForeColor = System.Drawing.Color.White
+        Me.btnBottomGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.BOTTOM
+        Me.btnBottomGate.ImagePosition = 20
+        Me.btnBottomGate.ImageZoom = 25
+        Me.btnBottomGate.LabelPosition = 41
+        Me.btnBottomGate.LabelText = "BOTTOM GATE"
+        Me.btnBottomGate.Location = New System.Drawing.Point(279, 315)
+        Me.btnBottomGate.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnBottomGate.Name = "btnBottomGate"
+        Me.btnBottomGate.Size = New System.Drawing.Size(190, 120)
+        Me.btnBottomGate.TabIndex = 13
+        '
+        'btnMixerTimer
+        '
+        Me.btnMixerTimer.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnMixerTimer.color = System.Drawing.Color.SeaGreen
+        Me.btnMixerTimer.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnMixerTimer.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMixerTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnMixerTimer.ForeColor = System.Drawing.Color.White
+        Me.btnMixerTimer.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.MIX
+        Me.btnMixerTimer.ImagePosition = 20
+        Me.btnMixerTimer.ImageZoom = 25
+        Me.btnMixerTimer.LabelPosition = 41
+        Me.btnMixerTimer.LabelText = "MIXER"
+        Me.btnMixerTimer.Location = New System.Drawing.Point(52, 609)
+        Me.btnMixerTimer.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnMixerTimer.Name = "btnMixerTimer"
+        Me.btnMixerTimer.Size = New System.Drawing.Size(190, 120)
+        Me.btnMixerTimer.TabIndex = 11
+        '
+        'btnTopGate
+        '
+        Me.btnTopGate.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnTopGate.color = System.Drawing.Color.SeaGreen
+        Me.btnTopGate.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnTopGate.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTopGate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnTopGate.ForeColor = System.Drawing.Color.White
+        Me.btnTopGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.TOP
+        Me.btnTopGate.ImagePosition = 20
+        Me.btnTopGate.ImageZoom = 25
+        Me.btnTopGate.LabelPosition = 41
+        Me.btnTopGate.LabelText = "TOP GATE"
+        Me.btnTopGate.Location = New System.Drawing.Point(52, 315)
+        Me.btnTopGate.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnTopGate.Name = "btnTopGate"
+        Me.btnTopGate.Size = New System.Drawing.Size(190, 120)
+        Me.btnTopGate.TabIndex = 9
+        '
+        'btnDischarge
+        '
+        Me.btnDischarge.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnDischarge.color = System.Drawing.Color.SeaGreen
+        Me.btnDischarge.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnDischarge.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnDischarge.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnDischarge.ForeColor = System.Drawing.Color.White
+        Me.btnDischarge.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCHARGE
+        Me.btnDischarge.ImagePosition = 20
+        Me.btnDischarge.ImageZoom = 25
+        Me.btnDischarge.LabelPosition = 41
+        Me.btnDischarge.LabelText = "DISCHARGE"
+        Me.btnDischarge.Location = New System.Drawing.Point(279, 166)
+        Me.btnDischarge.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnDischarge.Name = "btnDischarge"
+        Me.btnDischarge.Size = New System.Drawing.Size(190, 120)
+        Me.btnDischarge.TabIndex = 7
+        '
+        'btnStartStopBatching
+        '
+        Me.btnStartStopBatching.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnStartStopBatching.color = System.Drawing.Color.SeaGreen
+        Me.btnStartStopBatching.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnStartStopBatching.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnStartStopBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnStartStopBatching.ForeColor = System.Drawing.Color.White
+        Me.btnStartStopBatching.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.START
+        Me.btnStartStopBatching.ImagePosition = 20
+        Me.btnStartStopBatching.ImageZoom = 25
+        Me.btnStartStopBatching.LabelPosition = 41
+        Me.btnStartStopBatching.LabelText = "START"
+        Me.btnStartStopBatching.Location = New System.Drawing.Point(52, 166)
+        Me.btnStartStopBatching.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnStartStopBatching.Name = "btnStartStopBatching"
+        Me.btnStartStopBatching.Size = New System.Drawing.Size(190, 120)
+        Me.btnStartStopBatching.TabIndex = 5
+        '
+        'btnRefreshFormulaBatching
+        '
+        Me.btnRefreshFormulaBatching.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnRefreshFormulaBatching.color = System.Drawing.Color.SeaGreen
+        Me.btnRefreshFormulaBatching.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnRefreshFormulaBatching.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRefreshFormulaBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnRefreshFormulaBatching.ForeColor = System.Drawing.Color.White
+        Me.btnRefreshFormulaBatching.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.REFRESH
+        Me.btnRefreshFormulaBatching.ImagePosition = 10
+        Me.btnRefreshFormulaBatching.ImageZoom = 15
+        Me.btnRefreshFormulaBatching.LabelPosition = 41
+        Me.btnRefreshFormulaBatching.LabelText = "REFRESH"
+        Me.btnRefreshFormulaBatching.Location = New System.Drawing.Point(387, 42)
+        Me.btnRefreshFormulaBatching.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnRefreshFormulaBatching.Name = "btnRefreshFormulaBatching"
+        Me.btnRefreshFormulaBatching.Size = New System.Drawing.Size(144, 80)
+        Me.btnRefreshFormulaBatching.TabIndex = 4
+        '
         'pnlDiagram
         '
         Me.pnlDiagram.BackColor = System.Drawing.Color.Transparent
+        Me.pnlDiagram.Controls.Add(Me.Button3)
+        Me.pnlDiagram.Controls.Add(Me.Button4)
+        Me.pnlDiagram.Controls.Add(Me.Button2)
+        Me.pnlDiagram.Controls.Add(Me.Button1)
+        Me.pnlDiagram.Controls.Add(Me.TextBox2)
+        Me.pnlDiagram.Controls.Add(Me.TextBox1)
         Me.pnlDiagram.Controls.Add(Me.pbLiquidGate)
         Me.pnlDiagram.Controls.Add(Me.pbCocoOil)
         Me.pnlDiagram.Controls.Add(Me.pbMolasses)
@@ -425,6 +622,222 @@ Partial Class Form1
         Me.pnlDiagram.Name = "pnlDiagram"
         Me.pnlDiagram.Size = New System.Drawing.Size(840, 1080)
         Me.pnlDiagram.TabIndex = 1
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(191, 482)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 72
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(191, 453)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 71
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(191, 411)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 70
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(191, 382)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 69
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(50, 468)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 68
+        Me.TextBox2.Text = "0"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(50, 415)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 67
+        Me.TextBox1.Text = "0"
+        '
+        'pbLiquidGate
+        '
+        Me.pbLiquidGate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbLiquidGate.Location = New System.Drawing.Point(516, 939)
+        Me.pbLiquidGate.Name = "pbLiquidGate"
+        Me.pbLiquidGate.Size = New System.Drawing.Size(40, 40)
+        Me.pbLiquidGate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbLiquidGate.TabIndex = 66
+        Me.pbLiquidGate.TabStop = False
+        '
+        'pbCocoOil
+        '
+        Me.pbCocoOil.BackColor = System.Drawing.Color.Transparent
+        Me.pbCocoOil.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbCocoOil.Location = New System.Drawing.Point(711, 888)
+        Me.pbCocoOil.Name = "pbCocoOil"
+        Me.pbCocoOil.Size = New System.Drawing.Size(40, 40)
+        Me.pbCocoOil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbCocoOil.TabIndex = 65
+        Me.pbCocoOil.TabStop = False
+        '
+        'pbMolasses
+        '
+        Me.pbMolasses.BackColor = System.Drawing.Color.Transparent
+        Me.pbMolasses.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbMolasses.Location = New System.Drawing.Point(606, 888)
+        Me.pbMolasses.Name = "pbMolasses"
+        Me.pbMolasses.Size = New System.Drawing.Size(40, 40)
+        Me.pbMolasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbMolasses.TabIndex = 64
+        Me.pbMolasses.TabStop = False
+        '
+        'pbSprayPump
+        '
+        Me.pbSprayPump.BackColor = System.Drawing.Color.Transparent
+        Me.pbSprayPump.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSprayPump.Location = New System.Drawing.Point(414, 959)
+        Me.pbSprayPump.Name = "pbSprayPump"
+        Me.pbSprayPump.Size = New System.Drawing.Size(40, 40)
+        Me.pbSprayPump.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSprayPump.TabIndex = 63
+        Me.pbSprayPump.TabStop = False
+        '
+        'pbBottomGate
+        '
+        Me.pbBottomGate.BackColor = System.Drawing.Color.Transparent
+        Me.pbBottomGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbBottomGate.Location = New System.Drawing.Point(303, 942)
+        Me.pbBottomGate.Name = "pbBottomGate"
+        Me.pbBottomGate.Size = New System.Drawing.Size(40, 40)
+        Me.pbBottomGate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbBottomGate.TabIndex = 62
+        Me.pbBottomGate.TabStop = False
+        '
+        'pbTopGate
+        '
+        Me.pbTopGate.BackColor = System.Drawing.Color.Transparent
+        Me.pbTopGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbTopGate.Location = New System.Drawing.Point(303, 818)
+        Me.pbTopGate.Name = "pbTopGate"
+        Me.pbTopGate.Size = New System.Drawing.Size(40, 40)
+        Me.pbTopGate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbTopGate.TabIndex = 61
+        Me.pbTopGate.TabStop = False
+        '
+        'pbBatchGate
+        '
+        Me.pbBatchGate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbBatchGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbBatchGate.Location = New System.Drawing.Point(532, 618)
+        Me.pbBatchGate.Name = "pbBatchGate"
+        Me.pbBatchGate.Size = New System.Drawing.Size(40, 40)
+        Me.pbBatchGate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbBatchGate.TabIndex = 60
+        Me.pbBatchGate.TabStop = False
+        '
+        'pbSilo8
+        '
+        Me.pbSilo8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSilo8.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSilo8.Location = New System.Drawing.Point(711, 386)
+        Me.pbSilo8.Name = "pbSilo8"
+        Me.pbSilo8.Size = New System.Drawing.Size(40, 40)
+        Me.pbSilo8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSilo8.TabIndex = 59
+        Me.pbSilo8.TabStop = False
+        '
+        'pbSilo7
+        '
+        Me.pbSilo7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSilo7.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSilo7.Location = New System.Drawing.Point(590, 386)
+        Me.pbSilo7.Name = "pbSilo7"
+        Me.pbSilo7.Size = New System.Drawing.Size(40, 40)
+        Me.pbSilo7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSilo7.TabIndex = 58
+        Me.pbSilo7.TabStop = False
+        '
+        'pbSilo6
+        '
+        Me.pbSilo6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSilo6.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSilo6.Location = New System.Drawing.Point(468, 386)
+        Me.pbSilo6.Name = "pbSilo6"
+        Me.pbSilo6.Size = New System.Drawing.Size(40, 40)
+        Me.pbSilo6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSilo6.TabIndex = 57
+        Me.pbSilo6.TabStop = False
+        '
+        'pbSilo5
+        '
+        Me.pbSilo5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSilo5.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSilo5.Location = New System.Drawing.Point(347, 386)
+        Me.pbSilo5.Name = "pbSilo5"
+        Me.pbSilo5.Size = New System.Drawing.Size(40, 40)
+        Me.pbSilo5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSilo5.TabIndex = 56
+        Me.pbSilo5.TabStop = False
+        '
+        'pbSilo4
+        '
+        Me.pbSilo4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSilo4.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSilo4.Location = New System.Drawing.Point(711, 144)
+        Me.pbSilo4.Name = "pbSilo4"
+        Me.pbSilo4.Size = New System.Drawing.Size(40, 40)
+        Me.pbSilo4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSilo4.TabIndex = 55
+        Me.pbSilo4.TabStop = False
+        '
+        'pbSilo3
+        '
+        Me.pbSilo3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSilo3.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSilo3.Location = New System.Drawing.Point(589, 144)
+        Me.pbSilo3.Name = "pbSilo3"
+        Me.pbSilo3.Size = New System.Drawing.Size(40, 40)
+        Me.pbSilo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSilo3.TabIndex = 54
+        Me.pbSilo3.TabStop = False
+        '
+        'pbSilo2
+        '
+        Me.pbSilo2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSilo2.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSilo2.Location = New System.Drawing.Point(468, 144)
+        Me.pbSilo2.Name = "pbSilo2"
+        Me.pbSilo2.Size = New System.Drawing.Size(40, 40)
+        Me.pbSilo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSilo2.TabIndex = 53
+        Me.pbSilo2.TabStop = False
+        '
+        'pbSilo1
+        '
+        Me.pbSilo1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbSilo1.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
+        Me.pbSilo1.Location = New System.Drawing.Point(346, 144)
+        Me.pbSilo1.Name = "pbSilo1"
+        Me.pbSilo1.Size = New System.Drawing.Size(40, 40)
+        Me.pbSilo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSilo1.TabIndex = 52
+        Me.pbSilo1.TabStop = False
         '
         'Label65
         '
@@ -976,6 +1389,27 @@ Partial Class Form1
         Me.Label5.Text = "Silo 1"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.LIQUID_AND_MIXER
+        Me.PictureBox2.Location = New System.Drawing.Point(37, 695)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(761, 350)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.SILOS
+        Me.PictureBox1.Location = New System.Drawing.Point(303, 29)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(492, 633)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'pnlFormula
         '
         Me.pnlFormula.Controls.Add(Me.lblFormulaMatSilo8)
@@ -1023,6 +1457,116 @@ Partial Class Form1
         Me.pnlFormula.Size = New System.Drawing.Size(540, 1080)
         Me.pnlFormula.TabIndex = 2
         '
+        'lblFormulaMatSilo8
+        '
+        Me.lblFormulaMatSilo8.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormulaMatSilo8.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo8.Location = New System.Drawing.Point(268, 601)
+        Me.lblFormulaMatSilo8.Name = "lblFormulaMatSilo8"
+        Me.lblFormulaMatSilo8.Size = New System.Drawing.Size(158, 23)
+        Me.lblFormulaMatSilo8.TabIndex = 62
+        Me.lblFormulaMatSilo8.Text = "Silo 1 Weight:"
+        Me.lblFormulaMatSilo8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFormulaMatSilo7
+        '
+        Me.lblFormulaMatSilo7.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormulaMatSilo7.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo7.Location = New System.Drawing.Point(37, 601)
+        Me.lblFormulaMatSilo7.Name = "lblFormulaMatSilo7"
+        Me.lblFormulaMatSilo7.Size = New System.Drawing.Size(158, 23)
+        Me.lblFormulaMatSilo7.TabIndex = 61
+        Me.lblFormulaMatSilo7.Text = "Silo 1 Weight:"
+        Me.lblFormulaMatSilo7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFormulaMatSilo6
+        '
+        Me.lblFormulaMatSilo6.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormulaMatSilo6.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo6.Location = New System.Drawing.Point(268, 492)
+        Me.lblFormulaMatSilo6.Name = "lblFormulaMatSilo6"
+        Me.lblFormulaMatSilo6.Size = New System.Drawing.Size(158, 23)
+        Me.lblFormulaMatSilo6.TabIndex = 60
+        Me.lblFormulaMatSilo6.Text = "Silo 1 Weight:"
+        Me.lblFormulaMatSilo6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFormulaMatSilo5
+        '
+        Me.lblFormulaMatSilo5.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormulaMatSilo5.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo5.Location = New System.Drawing.Point(37, 492)
+        Me.lblFormulaMatSilo5.Name = "lblFormulaMatSilo5"
+        Me.lblFormulaMatSilo5.Size = New System.Drawing.Size(158, 23)
+        Me.lblFormulaMatSilo5.TabIndex = 59
+        Me.lblFormulaMatSilo5.Text = "Silo 1 Weight:"
+        Me.lblFormulaMatSilo5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFormulaMatSilo4
+        '
+        Me.lblFormulaMatSilo4.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormulaMatSilo4.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo4.Location = New System.Drawing.Point(268, 383)
+        Me.lblFormulaMatSilo4.Name = "lblFormulaMatSilo4"
+        Me.lblFormulaMatSilo4.Size = New System.Drawing.Size(158, 23)
+        Me.lblFormulaMatSilo4.TabIndex = 58
+        Me.lblFormulaMatSilo4.Text = "Silo 1 Weight:"
+        Me.lblFormulaMatSilo4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFormulaMatSilo3
+        '
+        Me.lblFormulaMatSilo3.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormulaMatSilo3.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo3.Location = New System.Drawing.Point(37, 383)
+        Me.lblFormulaMatSilo3.Name = "lblFormulaMatSilo3"
+        Me.lblFormulaMatSilo3.Size = New System.Drawing.Size(158, 23)
+        Me.lblFormulaMatSilo3.TabIndex = 57
+        Me.lblFormulaMatSilo3.Text = "Silo 1 Weight:"
+        Me.lblFormulaMatSilo3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFormulaMatSilo2
+        '
+        Me.lblFormulaMatSilo2.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormulaMatSilo2.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo2.Location = New System.Drawing.Point(268, 274)
+        Me.lblFormulaMatSilo2.Name = "lblFormulaMatSilo2"
+        Me.lblFormulaMatSilo2.Size = New System.Drawing.Size(158, 23)
+        Me.lblFormulaMatSilo2.TabIndex = 56
+        Me.lblFormulaMatSilo2.Text = "Silo 1 Weight:"
+        Me.lblFormulaMatSilo2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFormulaMatSilo1
+        '
+        Me.lblFormulaMatSilo1.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormulaMatSilo1.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo1.Location = New System.Drawing.Point(37, 274)
+        Me.lblFormulaMatSilo1.Name = "lblFormulaMatSilo1"
+        Me.lblFormulaMatSilo1.Size = New System.Drawing.Size(158, 23)
+        Me.lblFormulaMatSilo1.TabIndex = 55
+        Me.lblFormulaMatSilo1.Text = "Silo 1 Weight:"
+        Me.lblFormulaMatSilo1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Open Sans", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(35, 44)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(326, 41)
+        Me.Label2.TabIndex = 54
+        Me.Label2.Text = "Select Formula :"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cmbFormula
+        '
+        Me.cmbFormula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbFormula.Font = New System.Drawing.Font("Open Sans SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbFormula.FormattingEnabled = True
+        Me.cmbFormula.Location = New System.Drawing.Point(37, 101)
+        Me.cmbFormula.MaxDropDownItems = 10
+        Me.cmbFormula.Name = "cmbFormula"
+        Me.cmbFormula.Size = New System.Drawing.Size(326, 36)
+        Me.cmbFormula.TabIndex = 53
+        '
         'lblFormulaId
         '
         Me.lblFormulaId.BackColor = System.Drawing.Color.Transparent
@@ -1044,6 +1588,101 @@ Partial Class Form1
         Me.Label47.TabIndex = 51
         Me.Label47.Text = "ID:"
         Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnClear.color = System.Drawing.Color.SeaGreen
+        Me.btnClear.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.CLEAR
+        Me.btnClear.ImagePosition = 10
+        Me.btnClear.ImageZoom = 15
+        Me.btnClear.LabelPosition = 41
+        Me.btnClear.LabelText = "CLEAR"
+        Me.btnClear.Location = New System.Drawing.Point(184, 965)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(122, 80)
+        Me.btnClear.TabIndex = 50
+        '
+        'btnDeleteFormula
+        '
+        Me.btnDeleteFormula.BackColor = System.Drawing.Color.Red
+        Me.btnDeleteFormula.color = System.Drawing.Color.Red
+        Me.btnDeleteFormula.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnDeleteFormula.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnDeleteFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnDeleteFormula.ForeColor = System.Drawing.Color.White
+        Me.btnDeleteFormula.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DELETE
+        Me.btnDeleteFormula.ImagePosition = 20
+        Me.btnDeleteFormula.ImageZoom = 25
+        Me.btnDeleteFormula.LabelPosition = 41
+        Me.btnDeleteFormula.LabelText = "DELETE"
+        Me.btnDeleteFormula.Location = New System.Drawing.Point(318, 829)
+        Me.btnDeleteFormula.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnDeleteFormula.Name = "btnDeleteFormula"
+        Me.btnDeleteFormula.Size = New System.Drawing.Size(122, 112)
+        Me.btnDeleteFormula.TabIndex = 49
+        '
+        'btnEditFormula
+        '
+        Me.btnEditFormula.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnEditFormula.color = System.Drawing.Color.SeaGreen
+        Me.btnEditFormula.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnEditFormula.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEditFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnEditFormula.ForeColor = System.Drawing.Color.White
+        Me.btnEditFormula.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.EDIT
+        Me.btnEditFormula.ImagePosition = 20
+        Me.btnEditFormula.ImageZoom = 25
+        Me.btnEditFormula.LabelPosition = 41
+        Me.btnEditFormula.LabelText = "EDIT"
+        Me.btnEditFormula.Location = New System.Drawing.Point(184, 829)
+        Me.btnEditFormula.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnEditFormula.Name = "btnEditFormula"
+        Me.btnEditFormula.Size = New System.Drawing.Size(122, 112)
+        Me.btnEditFormula.TabIndex = 48
+        '
+        'btnAddFormula
+        '
+        Me.btnAddFormula.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnAddFormula.color = System.Drawing.Color.SeaGreen
+        Me.btnAddFormula.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnAddFormula.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnAddFormula.ForeColor = System.Drawing.Color.White
+        Me.btnAddFormula.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.SAVE
+        Me.btnAddFormula.ImagePosition = 20
+        Me.btnAddFormula.ImageZoom = 25
+        Me.btnAddFormula.LabelPosition = 41
+        Me.btnAddFormula.LabelText = "ADD"
+        Me.btnAddFormula.Location = New System.Drawing.Point(41, 829)
+        Me.btnAddFormula.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnAddFormula.Name = "btnAddFormula"
+        Me.btnAddFormula.Size = New System.Drawing.Size(122, 112)
+        Me.btnAddFormula.TabIndex = 47
+        '
+        'btnRefreshFormula
+        '
+        Me.btnRefreshFormula.BackColor = System.Drawing.Color.SeaGreen
+        Me.btnRefreshFormula.color = System.Drawing.Color.SeaGreen
+        Me.btnRefreshFormula.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnRefreshFormula.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRefreshFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.btnRefreshFormula.ForeColor = System.Drawing.Color.White
+        Me.btnRefreshFormula.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.REFRESH
+        Me.btnRefreshFormula.ImagePosition = 10
+        Me.btnRefreshFormula.ImageZoom = 15
+        Me.btnRefreshFormula.LabelPosition = 41
+        Me.btnRefreshFormula.LabelText = "REFRESH"
+        Me.btnRefreshFormula.Location = New System.Drawing.Point(381, 42)
+        Me.btnRefreshFormula.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnRefreshFormula.Name = "btnRefreshFormula"
+        Me.btnRefreshFormula.Size = New System.Drawing.Size(144, 80)
+        Me.btnRefreshFormula.TabIndex = 46
         '
         'Label45
         '
@@ -1373,582 +2012,6 @@ Partial Class Form1
         'tmrMixer
         '
         '
-        'cmbFormulaBatching
-        '
-        Me.cmbFormulaBatching.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbFormulaBatching.Font = New System.Drawing.Font("Open Sans SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbFormulaBatching.FormattingEnabled = True
-        Me.cmbFormulaBatching.Location = New System.Drawing.Point(52, 86)
-        Me.cmbFormulaBatching.MaxDropDownItems = 20
-        Me.cmbFormulaBatching.Name = "cmbFormulaBatching"
-        Me.cmbFormulaBatching.Size = New System.Drawing.Size(326, 36)
-        Me.cmbFormulaBatching.TabIndex = 23
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Open Sans", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(52, 42)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(326, 41)
-        Me.Label1.TabIndex = 49
-        Me.Label1.Text = "Select Formula Batching:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cmbFormula
-        '
-        Me.cmbFormula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbFormula.Font = New System.Drawing.Font("Open Sans SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbFormula.FormattingEnabled = True
-        Me.cmbFormula.Location = New System.Drawing.Point(37, 101)
-        Me.cmbFormula.MaxDropDownItems = 10
-        Me.cmbFormula.Name = "cmbFormula"
-        Me.cmbFormula.Size = New System.Drawing.Size(326, 36)
-        Me.cmbFormula.TabIndex = 53
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Open Sans", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(35, 44)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(326, 41)
-        Me.Label2.TabIndex = 54
-        Me.Label2.Text = "Select Formula :"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblFormulaMatSilo1
-        '
-        Me.lblFormulaMatSilo1.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo1.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormulaMatSilo1.Location = New System.Drawing.Point(37, 274)
-        Me.lblFormulaMatSilo1.Name = "lblFormulaMatSilo1"
-        Me.lblFormulaMatSilo1.Size = New System.Drawing.Size(158, 23)
-        Me.lblFormulaMatSilo1.TabIndex = 55
-        Me.lblFormulaMatSilo1.Text = "Silo 1 Weight:"
-        Me.lblFormulaMatSilo1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblFormulaMatSilo2
-        '
-        Me.lblFormulaMatSilo2.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo2.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormulaMatSilo2.Location = New System.Drawing.Point(268, 274)
-        Me.lblFormulaMatSilo2.Name = "lblFormulaMatSilo2"
-        Me.lblFormulaMatSilo2.Size = New System.Drawing.Size(158, 23)
-        Me.lblFormulaMatSilo2.TabIndex = 56
-        Me.lblFormulaMatSilo2.Text = "Silo 1 Weight:"
-        Me.lblFormulaMatSilo2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblFormulaMatSilo4
-        '
-        Me.lblFormulaMatSilo4.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo4.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormulaMatSilo4.Location = New System.Drawing.Point(268, 383)
-        Me.lblFormulaMatSilo4.Name = "lblFormulaMatSilo4"
-        Me.lblFormulaMatSilo4.Size = New System.Drawing.Size(158, 23)
-        Me.lblFormulaMatSilo4.TabIndex = 58
-        Me.lblFormulaMatSilo4.Text = "Silo 1 Weight:"
-        Me.lblFormulaMatSilo4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblFormulaMatSilo3
-        '
-        Me.lblFormulaMatSilo3.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo3.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormulaMatSilo3.Location = New System.Drawing.Point(37, 383)
-        Me.lblFormulaMatSilo3.Name = "lblFormulaMatSilo3"
-        Me.lblFormulaMatSilo3.Size = New System.Drawing.Size(158, 23)
-        Me.lblFormulaMatSilo3.TabIndex = 57
-        Me.lblFormulaMatSilo3.Text = "Silo 1 Weight:"
-        Me.lblFormulaMatSilo3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblFormulaMatSilo6
-        '
-        Me.lblFormulaMatSilo6.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo6.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormulaMatSilo6.Location = New System.Drawing.Point(268, 492)
-        Me.lblFormulaMatSilo6.Name = "lblFormulaMatSilo6"
-        Me.lblFormulaMatSilo6.Size = New System.Drawing.Size(158, 23)
-        Me.lblFormulaMatSilo6.TabIndex = 60
-        Me.lblFormulaMatSilo6.Text = "Silo 1 Weight:"
-        Me.lblFormulaMatSilo6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblFormulaMatSilo5
-        '
-        Me.lblFormulaMatSilo5.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo5.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormulaMatSilo5.Location = New System.Drawing.Point(37, 492)
-        Me.lblFormulaMatSilo5.Name = "lblFormulaMatSilo5"
-        Me.lblFormulaMatSilo5.Size = New System.Drawing.Size(158, 23)
-        Me.lblFormulaMatSilo5.TabIndex = 59
-        Me.lblFormulaMatSilo5.Text = "Silo 1 Weight:"
-        Me.lblFormulaMatSilo5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblFormulaMatSilo8
-        '
-        Me.lblFormulaMatSilo8.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo8.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormulaMatSilo8.Location = New System.Drawing.Point(268, 601)
-        Me.lblFormulaMatSilo8.Name = "lblFormulaMatSilo8"
-        Me.lblFormulaMatSilo8.Size = New System.Drawing.Size(158, 23)
-        Me.lblFormulaMatSilo8.TabIndex = 62
-        Me.lblFormulaMatSilo8.Text = "Silo 1 Weight:"
-        Me.lblFormulaMatSilo8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblFormulaMatSilo7
-        '
-        Me.lblFormulaMatSilo7.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo7.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormulaMatSilo7.Location = New System.Drawing.Point(37, 601)
-        Me.lblFormulaMatSilo7.Name = "lblFormulaMatSilo7"
-        Me.lblFormulaMatSilo7.Size = New System.Drawing.Size(158, 23)
-        Me.lblFormulaMatSilo7.TabIndex = 61
-        Me.lblFormulaMatSilo7.Text = "Silo 1 Weight:"
-        Me.lblFormulaMatSilo7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnClear
-        '
-        Me.btnClear.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnClear.color = System.Drawing.Color.SeaGreen
-        Me.btnClear.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnClear.ForeColor = System.Drawing.Color.White
-        Me.btnClear.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.CLEAR
-        Me.btnClear.ImagePosition = 10
-        Me.btnClear.ImageZoom = 15
-        Me.btnClear.LabelPosition = 41
-        Me.btnClear.LabelText = "CLEAR"
-        Me.btnClear.Location = New System.Drawing.Point(184, 965)
-        Me.btnClear.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(122, 80)
-        Me.btnClear.TabIndex = 50
-        '
-        'btnDeleteFormula
-        '
-        Me.btnDeleteFormula.BackColor = System.Drawing.Color.Red
-        Me.btnDeleteFormula.color = System.Drawing.Color.Red
-        Me.btnDeleteFormula.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnDeleteFormula.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDeleteFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnDeleteFormula.ForeColor = System.Drawing.Color.White
-        Me.btnDeleteFormula.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DELETE
-        Me.btnDeleteFormula.ImagePosition = 20
-        Me.btnDeleteFormula.ImageZoom = 25
-        Me.btnDeleteFormula.LabelPosition = 41
-        Me.btnDeleteFormula.LabelText = "DELETE"
-        Me.btnDeleteFormula.Location = New System.Drawing.Point(318, 829)
-        Me.btnDeleteFormula.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnDeleteFormula.Name = "btnDeleteFormula"
-        Me.btnDeleteFormula.Size = New System.Drawing.Size(122, 112)
-        Me.btnDeleteFormula.TabIndex = 49
-        '
-        'btnEditFormula
-        '
-        Me.btnEditFormula.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnEditFormula.color = System.Drawing.Color.SeaGreen
-        Me.btnEditFormula.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnEditFormula.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEditFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnEditFormula.ForeColor = System.Drawing.Color.White
-        Me.btnEditFormula.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.EDIT
-        Me.btnEditFormula.ImagePosition = 20
-        Me.btnEditFormula.ImageZoom = 25
-        Me.btnEditFormula.LabelPosition = 41
-        Me.btnEditFormula.LabelText = "EDIT"
-        Me.btnEditFormula.Location = New System.Drawing.Point(184, 829)
-        Me.btnEditFormula.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnEditFormula.Name = "btnEditFormula"
-        Me.btnEditFormula.Size = New System.Drawing.Size(122, 112)
-        Me.btnEditFormula.TabIndex = 48
-        '
-        'btnAddFormula
-        '
-        Me.btnAddFormula.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnAddFormula.color = System.Drawing.Color.SeaGreen
-        Me.btnAddFormula.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnAddFormula.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnAddFormula.ForeColor = System.Drawing.Color.White
-        Me.btnAddFormula.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.SAVE
-        Me.btnAddFormula.ImagePosition = 20
-        Me.btnAddFormula.ImageZoom = 25
-        Me.btnAddFormula.LabelPosition = 41
-        Me.btnAddFormula.LabelText = "ADD"
-        Me.btnAddFormula.Location = New System.Drawing.Point(41, 829)
-        Me.btnAddFormula.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnAddFormula.Name = "btnAddFormula"
-        Me.btnAddFormula.Size = New System.Drawing.Size(122, 112)
-        Me.btnAddFormula.TabIndex = 47
-        '
-        'btnRefreshFormula
-        '
-        Me.btnRefreshFormula.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnRefreshFormula.color = System.Drawing.Color.SeaGreen
-        Me.btnRefreshFormula.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnRefreshFormula.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRefreshFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnRefreshFormula.ForeColor = System.Drawing.Color.White
-        Me.btnRefreshFormula.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.REFRESH
-        Me.btnRefreshFormula.ImagePosition = 10
-        Me.btnRefreshFormula.ImageZoom = 15
-        Me.btnRefreshFormula.LabelPosition = 41
-        Me.btnRefreshFormula.LabelText = "REFRESH"
-        Me.btnRefreshFormula.Location = New System.Drawing.Point(381, 42)
-        Me.btnRefreshFormula.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnRefreshFormula.Name = "btnRefreshFormula"
-        Me.btnRefreshFormula.Size = New System.Drawing.Size(144, 80)
-        Me.btnRefreshFormula.TabIndex = 46
-        '
-        'pbLiquidGate
-        '
-        Me.pbLiquidGate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbLiquidGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbLiquidGate.Location = New System.Drawing.Point(516, 939)
-        Me.pbLiquidGate.Name = "pbLiquidGate"
-        Me.pbLiquidGate.Size = New System.Drawing.Size(40, 40)
-        Me.pbLiquidGate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbLiquidGate.TabIndex = 66
-        Me.pbLiquidGate.TabStop = False
-        '
-        'pbCocoOil
-        '
-        Me.pbCocoOil.BackColor = System.Drawing.Color.Transparent
-        Me.pbCocoOil.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbCocoOil.Location = New System.Drawing.Point(711, 888)
-        Me.pbCocoOil.Name = "pbCocoOil"
-        Me.pbCocoOil.Size = New System.Drawing.Size(40, 40)
-        Me.pbCocoOil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbCocoOil.TabIndex = 65
-        Me.pbCocoOil.TabStop = False
-        '
-        'pbMolasses
-        '
-        Me.pbMolasses.BackColor = System.Drawing.Color.Transparent
-        Me.pbMolasses.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbMolasses.Location = New System.Drawing.Point(606, 888)
-        Me.pbMolasses.Name = "pbMolasses"
-        Me.pbMolasses.Size = New System.Drawing.Size(40, 40)
-        Me.pbMolasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbMolasses.TabIndex = 64
-        Me.pbMolasses.TabStop = False
-        '
-        'pbSprayPump
-        '
-        Me.pbSprayPump.BackColor = System.Drawing.Color.Transparent
-        Me.pbSprayPump.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbSprayPump.Location = New System.Drawing.Point(414, 959)
-        Me.pbSprayPump.Name = "pbSprayPump"
-        Me.pbSprayPump.Size = New System.Drawing.Size(40, 40)
-        Me.pbSprayPump.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSprayPump.TabIndex = 63
-        Me.pbSprayPump.TabStop = False
-        '
-        'pbBottomGate
-        '
-        Me.pbBottomGate.BackColor = System.Drawing.Color.Transparent
-        Me.pbBottomGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbBottomGate.Location = New System.Drawing.Point(303, 942)
-        Me.pbBottomGate.Name = "pbBottomGate"
-        Me.pbBottomGate.Size = New System.Drawing.Size(40, 40)
-        Me.pbBottomGate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbBottomGate.TabIndex = 62
-        Me.pbBottomGate.TabStop = False
-        '
-        'pbTopGate
-        '
-        Me.pbTopGate.BackColor = System.Drawing.Color.Transparent
-        Me.pbTopGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbTopGate.Location = New System.Drawing.Point(303, 818)
-        Me.pbTopGate.Name = "pbTopGate"
-        Me.pbTopGate.Size = New System.Drawing.Size(40, 40)
-        Me.pbTopGate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbTopGate.TabIndex = 61
-        Me.pbTopGate.TabStop = False
-        '
-        'pbBatchGate
-        '
-        Me.pbBatchGate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbBatchGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbBatchGate.Location = New System.Drawing.Point(532, 618)
-        Me.pbBatchGate.Name = "pbBatchGate"
-        Me.pbBatchGate.Size = New System.Drawing.Size(40, 40)
-        Me.pbBatchGate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbBatchGate.TabIndex = 60
-        Me.pbBatchGate.TabStop = False
-        '
-        'pbSilo8
-        '
-        Me.pbSilo8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbSilo8.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbSilo8.Location = New System.Drawing.Point(711, 386)
-        Me.pbSilo8.Name = "pbSilo8"
-        Me.pbSilo8.Size = New System.Drawing.Size(40, 40)
-        Me.pbSilo8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSilo8.TabIndex = 59
-        Me.pbSilo8.TabStop = False
-        '
-        'pbSilo7
-        '
-        Me.pbSilo7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbSilo7.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbSilo7.Location = New System.Drawing.Point(590, 386)
-        Me.pbSilo7.Name = "pbSilo7"
-        Me.pbSilo7.Size = New System.Drawing.Size(40, 40)
-        Me.pbSilo7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSilo7.TabIndex = 58
-        Me.pbSilo7.TabStop = False
-        '
-        'pbSilo6
-        '
-        Me.pbSilo6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbSilo6.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbSilo6.Location = New System.Drawing.Point(468, 386)
-        Me.pbSilo6.Name = "pbSilo6"
-        Me.pbSilo6.Size = New System.Drawing.Size(40, 40)
-        Me.pbSilo6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSilo6.TabIndex = 57
-        Me.pbSilo6.TabStop = False
-        '
-        'pbSilo5
-        '
-        Me.pbSilo5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbSilo5.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbSilo5.Location = New System.Drawing.Point(347, 386)
-        Me.pbSilo5.Name = "pbSilo5"
-        Me.pbSilo5.Size = New System.Drawing.Size(40, 40)
-        Me.pbSilo5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSilo5.TabIndex = 56
-        Me.pbSilo5.TabStop = False
-        '
-        'pbSilo4
-        '
-        Me.pbSilo4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbSilo4.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbSilo4.Location = New System.Drawing.Point(711, 144)
-        Me.pbSilo4.Name = "pbSilo4"
-        Me.pbSilo4.Size = New System.Drawing.Size(40, 40)
-        Me.pbSilo4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSilo4.TabIndex = 55
-        Me.pbSilo4.TabStop = False
-        '
-        'pbSilo3
-        '
-        Me.pbSilo3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbSilo3.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbSilo3.Location = New System.Drawing.Point(589, 144)
-        Me.pbSilo3.Name = "pbSilo3"
-        Me.pbSilo3.Size = New System.Drawing.Size(40, 40)
-        Me.pbSilo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSilo3.TabIndex = 54
-        Me.pbSilo3.TabStop = False
-        '
-        'pbSilo2
-        '
-        Me.pbSilo2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbSilo2.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.RUN
-        Me.pbSilo2.Location = New System.Drawing.Point(468, 144)
-        Me.pbSilo2.Name = "pbSilo2"
-        Me.pbSilo2.Size = New System.Drawing.Size(40, 40)
-        Me.pbSilo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSilo2.TabIndex = 53
-        Me.pbSilo2.TabStop = False
-        '
-        'pbSilo1
-        '
-        Me.pbSilo1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pbSilo1.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
-        Me.pbSilo1.Location = New System.Drawing.Point(346, 144)
-        Me.pbSilo1.Name = "pbSilo1"
-        Me.pbSilo1.Size = New System.Drawing.Size(40, 40)
-        Me.pbSilo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSilo1.TabIndex = 52
-        Me.pbSilo1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.LIQUID_AND_MIXER
-        Me.PictureBox2.Location = New System.Drawing.Point(37, 695)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(761, 350)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.SILOS
-        Me.PictureBox1.Location = New System.Drawing.Point(303, 29)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(492, 633)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'pbLiquidScaleStatus
-        '
-        Me.pbLiquidScaleStatus.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
-        Me.pbLiquidScaleStatus.Location = New System.Drawing.Point(424, 50)
-        Me.pbLiquidScaleStatus.Name = "pbLiquidScaleStatus"
-        Me.pbLiquidScaleStatus.Size = New System.Drawing.Size(40, 40)
-        Me.pbLiquidScaleStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbLiquidScaleStatus.TabIndex = 23
-        Me.pbLiquidScaleStatus.TabStop = False
-        '
-        'pbDryScaleStatus
-        '
-        Me.pbDryScaleStatus.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
-        Me.pbDryScaleStatus.Location = New System.Drawing.Point(228, 50)
-        Me.pbDryScaleStatus.Name = "pbDryScaleStatus"
-        Me.pbDryScaleStatus.Size = New System.Drawing.Size(40, 40)
-        Me.pbDryScaleStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbDryScaleStatus.TabIndex = 22
-        Me.pbDryScaleStatus.TabStop = False
-        '
-        'pbPLC
-        '
-        Me.pbPLC.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
-        Me.pbPLC.Location = New System.Drawing.Point(58, 50)
-        Me.pbPLC.Name = "pbPLC"
-        Me.pbPLC.Size = New System.Drawing.Size(40, 40)
-        Me.pbPLC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbPLC.TabIndex = 21
-        Me.pbPLC.TabStop = False
-        '
-        'btnSprayPump
-        '
-        Me.btnSprayPump.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnSprayPump.color = System.Drawing.Color.SeaGreen
-        Me.btnSprayPump.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnSprayPump.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSprayPump.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnSprayPump.ForeColor = System.Drawing.Color.White
-        Me.btnSprayPump.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.SPRAY
-        Me.btnSprayPump.ImagePosition = 20
-        Me.btnSprayPump.ImageZoom = 25
-        Me.btnSprayPump.LabelPosition = 41
-        Me.btnSprayPump.LabelText = "SPRAY"
-        Me.btnSprayPump.Location = New System.Drawing.Point(279, 609)
-        Me.btnSprayPump.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnSprayPump.Name = "btnSprayPump"
-        Me.btnSprayPump.Size = New System.Drawing.Size(190, 120)
-        Me.btnSprayPump.TabIndex = 14
-        '
-        'btnBottomGate
-        '
-        Me.btnBottomGate.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnBottomGate.color = System.Drawing.Color.SeaGreen
-        Me.btnBottomGate.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnBottomGate.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBottomGate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnBottomGate.ForeColor = System.Drawing.Color.White
-        Me.btnBottomGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.BOTTOM
-        Me.btnBottomGate.ImagePosition = 20
-        Me.btnBottomGate.ImageZoom = 25
-        Me.btnBottomGate.LabelPosition = 41
-        Me.btnBottomGate.LabelText = "BOTTOM GATE"
-        Me.btnBottomGate.Location = New System.Drawing.Point(279, 315)
-        Me.btnBottomGate.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnBottomGate.Name = "btnBottomGate"
-        Me.btnBottomGate.Size = New System.Drawing.Size(190, 120)
-        Me.btnBottomGate.TabIndex = 13
-        '
-        'btnMixerTimer
-        '
-        Me.btnMixerTimer.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnMixerTimer.color = System.Drawing.Color.SeaGreen
-        Me.btnMixerTimer.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnMixerTimer.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMixerTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnMixerTimer.ForeColor = System.Drawing.Color.White
-        Me.btnMixerTimer.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.MIX
-        Me.btnMixerTimer.ImagePosition = 20
-        Me.btnMixerTimer.ImageZoom = 25
-        Me.btnMixerTimer.LabelPosition = 41
-        Me.btnMixerTimer.LabelText = "MIXER"
-        Me.btnMixerTimer.Location = New System.Drawing.Point(52, 609)
-        Me.btnMixerTimer.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnMixerTimer.Name = "btnMixerTimer"
-        Me.btnMixerTimer.Size = New System.Drawing.Size(190, 120)
-        Me.btnMixerTimer.TabIndex = 11
-        '
-        'btnTopGate
-        '
-        Me.btnTopGate.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnTopGate.color = System.Drawing.Color.SeaGreen
-        Me.btnTopGate.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnTopGate.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnTopGate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnTopGate.ForeColor = System.Drawing.Color.White
-        Me.btnTopGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.TOP
-        Me.btnTopGate.ImagePosition = 20
-        Me.btnTopGate.ImageZoom = 25
-        Me.btnTopGate.LabelPosition = 41
-        Me.btnTopGate.LabelText = "TOP GATE"
-        Me.btnTopGate.Location = New System.Drawing.Point(52, 315)
-        Me.btnTopGate.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnTopGate.Name = "btnTopGate"
-        Me.btnTopGate.Size = New System.Drawing.Size(190, 120)
-        Me.btnTopGate.TabIndex = 9
-        '
-        'btnDischarge
-        '
-        Me.btnDischarge.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnDischarge.color = System.Drawing.Color.SeaGreen
-        Me.btnDischarge.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnDischarge.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDischarge.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnDischarge.ForeColor = System.Drawing.Color.White
-        Me.btnDischarge.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCHARGE
-        Me.btnDischarge.ImagePosition = 20
-        Me.btnDischarge.ImageZoom = 25
-        Me.btnDischarge.LabelPosition = 41
-        Me.btnDischarge.LabelText = "DISCHARGE"
-        Me.btnDischarge.Location = New System.Drawing.Point(279, 166)
-        Me.btnDischarge.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnDischarge.Name = "btnDischarge"
-        Me.btnDischarge.Size = New System.Drawing.Size(190, 120)
-        Me.btnDischarge.TabIndex = 7
-        '
-        'btnStartStopBatching
-        '
-        Me.btnStartStopBatching.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnStartStopBatching.color = System.Drawing.Color.SeaGreen
-        Me.btnStartStopBatching.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnStartStopBatching.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnStartStopBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnStartStopBatching.ForeColor = System.Drawing.Color.White
-        Me.btnStartStopBatching.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.START
-        Me.btnStartStopBatching.ImagePosition = 20
-        Me.btnStartStopBatching.ImageZoom = 25
-        Me.btnStartStopBatching.LabelPosition = 41
-        Me.btnStartStopBatching.LabelText = "START"
-        Me.btnStartStopBatching.Location = New System.Drawing.Point(52, 166)
-        Me.btnStartStopBatching.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnStartStopBatching.Name = "btnStartStopBatching"
-        Me.btnStartStopBatching.Size = New System.Drawing.Size(190, 120)
-        Me.btnStartStopBatching.TabIndex = 5
-        '
-        'btnRefreshFormulaBatching
-        '
-        Me.btnRefreshFormulaBatching.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnRefreshFormulaBatching.color = System.Drawing.Color.SeaGreen
-        Me.btnRefreshFormulaBatching.colorActive = System.Drawing.Color.MediumSeaGreen
-        Me.btnRefreshFormulaBatching.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRefreshFormulaBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.btnRefreshFormulaBatching.ForeColor = System.Drawing.Color.White
-        Me.btnRefreshFormulaBatching.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.REFRESH
-        Me.btnRefreshFormulaBatching.ImagePosition = 10
-        Me.btnRefreshFormulaBatching.ImageZoom = 15
-        Me.btnRefreshFormulaBatching.LabelPosition = 41
-        Me.btnRefreshFormulaBatching.LabelText = "REFRESH"
-        Me.btnRefreshFormulaBatching.Location = New System.Drawing.Point(387, 42)
-        Me.btnRefreshFormulaBatching.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnRefreshFormulaBatching.Name = "btnRefreshFormulaBatching"
-        Me.btnRefreshFormulaBatching.Size = New System.Drawing.Size(144, 80)
-        Me.btnRefreshFormulaBatching.TabIndex = 4
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1964,9 +2027,11 @@ Partial Class Form1
         Me.pnlBatching.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.pbLiquidScaleStatus, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbDryScaleStatus, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbPLC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlDiagram.ResumeLayout(False)
         Me.pnlDiagram.PerformLayout()
-        Me.pnlFormula.ResumeLayout(False)
         CType(Me.pbLiquidGate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbCocoOil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbMolasses, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1984,9 +2049,7 @@ Partial Class Form1
         CType(Me.pbSilo1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbLiquidScaleStatus, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbDryScaleStatus, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbPLC, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlFormula.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -2131,4 +2194,10 @@ Partial Class Form1
     Friend WithEvents lblFormulaMatSilo3 As Label
     Friend WithEvents lblFormulaMatSilo2 As Label
     Friend WithEvents lblFormulaMatSilo1 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
