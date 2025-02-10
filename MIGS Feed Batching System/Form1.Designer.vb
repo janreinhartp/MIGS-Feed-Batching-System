@@ -232,7 +232,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Open Sans", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(52, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(326, 41)
@@ -243,12 +243,12 @@ Partial Class Form1
         'cmbFormulaBatching
         '
         Me.cmbFormulaBatching.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbFormulaBatching.Font = New System.Drawing.Font("Open Sans SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbFormulaBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbFormulaBatching.FormattingEnabled = True
         Me.cmbFormulaBatching.Location = New System.Drawing.Point(52, 86)
         Me.cmbFormulaBatching.MaxDropDownItems = 20
         Me.cmbFormulaBatching.Name = "cmbFormulaBatching"
-        Me.cmbFormulaBatching.Size = New System.Drawing.Size(326, 36)
+        Me.cmbFormulaBatching.Size = New System.Drawing.Size(326, 33)
         Me.cmbFormulaBatching.TabIndex = 23
         '
         'Panel1
@@ -269,11 +269,11 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(357, 25)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(174, 22)
+        Me.Label8.Size = New System.Drawing.Size(188, 20)
         Me.Label8.TabIndex = 26
         Me.Label8.Text = "LIQUID SCALE STATUS"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -281,11 +281,11 @@ Partial Class Form1
         'txtbDryScaleStatus
         '
         Me.txtbDryScaleStatus.AutoSize = True
-        Me.txtbDryScaleStatus.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbDryScaleStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbDryScaleStatus.ForeColor = System.Drawing.Color.White
         Me.txtbDryScaleStatus.Location = New System.Drawing.Point(172, 25)
         Me.txtbDryScaleStatus.Name = "txtbDryScaleStatus"
-        Me.txtbDryScaleStatus.Size = New System.Drawing.Size(153, 22)
+        Me.txtbDryScaleStatus.Size = New System.Drawing.Size(168, 20)
         Me.txtbDryScaleStatus.TabIndex = 25
         Me.txtbDryScaleStatus.Text = "DRY SCALE STATUS"
         Me.txtbDryScaleStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -293,11 +293,11 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(28, 25)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(100, 22)
+        Me.Label6.Size = New System.Drawing.Size(106, 20)
         Me.Label6.TabIndex = 24
         Me.Label6.Text = "PLC STATUS"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -334,7 +334,7 @@ Partial Class Form1
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(299, 477)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(150, 25)
@@ -344,7 +344,7 @@ Partial Class Form1
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(72, 478)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(150, 25)
@@ -354,7 +354,7 @@ Partial Class Form1
         '
         'lblTimerSprayRemain
         '
-        Me.lblTimerSprayRemain.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimerSprayRemain.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTimerSprayRemain.Location = New System.Drawing.Point(299, 509)
         Me.lblTimerSprayRemain.Name = "lblTimerSprayRemain"
         Me.lblTimerSprayRemain.Size = New System.Drawing.Size(150, 25)
@@ -364,7 +364,7 @@ Partial Class Form1
         '
         'lblTimeMixerRemain
         '
-        Me.lblTimeMixerRemain.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimeMixerRemain.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTimeMixerRemain.Location = New System.Drawing.Point(72, 510)
         Me.lblTimeMixerRemain.Name = "lblTimeMixerRemain"
         Me.lblTimeMixerRemain.Size = New System.Drawing.Size(150, 25)
@@ -379,7 +379,7 @@ Partial Class Form1
         Me.txtbTimerSpray.BorderColorMouseHover = System.Drawing.Color.Blue
         Me.txtbTimerSpray.BorderThickness = 3
         Me.txtbTimerSpray.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbTimerSpray.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbTimerSpray.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbTimerSpray.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbTimerSpray.isPassword = False
         Me.txtbTimerSpray.Location = New System.Drawing.Point(297, 537)
@@ -397,7 +397,7 @@ Partial Class Form1
         Me.txtBTimeMixer.BorderColorMouseHover = System.Drawing.Color.Blue
         Me.txtBTimeMixer.BorderThickness = 3
         Me.txtBTimeMixer.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtBTimeMixer.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBTimeMixer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBTimeMixer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtBTimeMixer.isPassword = False
         Me.txtBTimeMixer.Location = New System.Drawing.Point(70, 537)
@@ -414,6 +414,7 @@ Partial Class Form1
         Me.btnSprayPump.color = System.Drawing.Color.SeaGreen
         Me.btnSprayPump.colorActive = System.Drawing.Color.MediumSeaGreen
         Me.btnSprayPump.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSprayPump.Enabled = False
         Me.btnSprayPump.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
         Me.btnSprayPump.ForeColor = System.Drawing.Color.White
         Me.btnSprayPump.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.SPRAY
@@ -842,7 +843,7 @@ Partial Class Form1
         'Label65
         '
         Me.Label65.BackColor = System.Drawing.Color.Transparent
-        Me.Label65.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label65.Location = New System.Drawing.Point(423, 795)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(183, 35)
@@ -853,7 +854,7 @@ Partial Class Form1
         'Label66
         '
         Me.Label66.BackColor = System.Drawing.Color.Transparent
-        Me.Label66.Font = New System.Drawing.Font("Open Sans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label66.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label66.Location = New System.Drawing.Point(391, 734)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(213, 61)
@@ -864,7 +865,7 @@ Partial Class Form1
         'lblFormulaNameBatching
         '
         Me.lblFormulaNameBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaNameBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaNameBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaNameBatching.Location = New System.Drawing.Point(23, 65)
         Me.lblFormulaNameBatching.Name = "lblFormulaNameBatching"
         Me.lblFormulaNameBatching.Size = New System.Drawing.Size(250, 23)
@@ -875,7 +876,7 @@ Partial Class Form1
         'Label64
         '
         Me.Label64.BackColor = System.Drawing.Color.Transparent
-        Me.Label64.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label64.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label64.Location = New System.Drawing.Point(23, 42)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(250, 23)
@@ -886,7 +887,7 @@ Partial Class Form1
         'lblCurrentTargetWeightLiquid
         '
         Me.lblCurrentTargetWeightLiquid.BackColor = System.Drawing.Color.Transparent
-        Me.lblCurrentTargetWeightLiquid.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCurrentTargetWeightLiquid.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCurrentTargetWeightLiquid.Location = New System.Drawing.Point(23, 339)
         Me.lblCurrentTargetWeightLiquid.Name = "lblCurrentTargetWeightLiquid"
         Me.lblCurrentTargetWeightLiquid.Size = New System.Drawing.Size(250, 23)
@@ -897,7 +898,7 @@ Partial Class Form1
         'Label60
         '
         Me.Label60.BackColor = System.Drawing.Color.Transparent
-        Me.Label60.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label60.Location = New System.Drawing.Point(23, 315)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(250, 23)
@@ -908,7 +909,7 @@ Partial Class Form1
         'lblCurrentPump
         '
         Me.lblCurrentPump.BackColor = System.Drawing.Color.Transparent
-        Me.lblCurrentPump.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCurrentPump.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCurrentPump.Location = New System.Drawing.Point(23, 291)
         Me.lblCurrentPump.Name = "lblCurrentPump"
         Me.lblCurrentPump.Size = New System.Drawing.Size(250, 23)
@@ -919,7 +920,7 @@ Partial Class Form1
         'Label62
         '
         Me.Label62.BackColor = System.Drawing.Color.Transparent
-        Me.Label62.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label62.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label62.Location = New System.Drawing.Point(23, 267)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(250, 23)
@@ -930,7 +931,7 @@ Partial Class Form1
         'lblCurrentTargetWeightDry
         '
         Me.lblCurrentTargetWeightDry.BackColor = System.Drawing.Color.Transparent
-        Me.lblCurrentTargetWeightDry.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCurrentTargetWeightDry.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCurrentTargetWeightDry.Location = New System.Drawing.Point(23, 243)
         Me.lblCurrentTargetWeightDry.Name = "lblCurrentTargetWeightDry"
         Me.lblCurrentTargetWeightDry.Size = New System.Drawing.Size(250, 23)
@@ -941,7 +942,7 @@ Partial Class Form1
         'Label58
         '
         Me.Label58.BackColor = System.Drawing.Color.Transparent
-        Me.Label58.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label58.Location = New System.Drawing.Point(23, 219)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(250, 23)
@@ -952,7 +953,7 @@ Partial Class Form1
         'lblCurrentSilo
         '
         Me.lblCurrentSilo.BackColor = System.Drawing.Color.Transparent
-        Me.lblCurrentSilo.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCurrentSilo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCurrentSilo.Location = New System.Drawing.Point(23, 195)
         Me.lblCurrentSilo.Name = "lblCurrentSilo"
         Me.lblCurrentSilo.Size = New System.Drawing.Size(250, 23)
@@ -963,7 +964,7 @@ Partial Class Form1
         'Label56
         '
         Me.Label56.BackColor = System.Drawing.Color.Transparent
-        Me.Label56.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label56.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label56.Location = New System.Drawing.Point(23, 171)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(250, 23)
@@ -974,7 +975,7 @@ Partial Class Form1
         'lblBatchingStatus
         '
         Me.lblBatchingStatus.BackColor = System.Drawing.Color.Transparent
-        Me.lblBatchingStatus.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBatchingStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBatchingStatus.Location = New System.Drawing.Point(23, 121)
         Me.lblBatchingStatus.Name = "lblBatchingStatus"
         Me.lblBatchingStatus.Size = New System.Drawing.Size(250, 23)
@@ -985,7 +986,7 @@ Partial Class Form1
         'Label48
         '
         Me.Label48.BackColor = System.Drawing.Color.Transparent
-        Me.Label48.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.Location = New System.Drawing.Point(23, 98)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(250, 23)
@@ -996,7 +997,7 @@ Partial Class Form1
         'lblTargetWeightDryBatching
         '
         Me.lblTargetWeightDryBatching.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblTargetWeightDryBatching.Font = New System.Drawing.Font("Open Sans", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTargetWeightDryBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTargetWeightDryBatching.Location = New System.Drawing.Point(590, 581)
         Me.lblTargetWeightDryBatching.Name = "lblTargetWeightDryBatching"
         Me.lblTargetWeightDryBatching.Size = New System.Drawing.Size(113, 35)
@@ -1007,7 +1008,7 @@ Partial Class Form1
         'lblCurrentWeightDryBatching
         '
         Me.lblCurrentWeightDryBatching.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblCurrentWeightDryBatching.Font = New System.Drawing.Font("Open Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCurrentWeightDryBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCurrentWeightDryBatching.Location = New System.Drawing.Point(386, 533)
         Me.lblCurrentWeightDryBatching.Name = "lblCurrentWeightDryBatching"
         Me.lblCurrentWeightDryBatching.Size = New System.Drawing.Size(329, 44)
@@ -1018,7 +1019,7 @@ Partial Class Form1
         'Label52
         '
         Me.Label52.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label52.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label52.Location = New System.Drawing.Point(399, 582)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(207, 35)
@@ -1029,7 +1030,7 @@ Partial Class Form1
         'Label53
         '
         Me.Label53.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label53.Font = New System.Drawing.Font("Open Sans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.Location = New System.Drawing.Point(386, 503)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(329, 30)
@@ -1040,7 +1041,7 @@ Partial Class Form1
         'lblTargetWeightLiquidBatching
         '
         Me.lblTargetWeightLiquidBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblTargetWeightLiquidBatching.Font = New System.Drawing.Font("Open Sans", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTargetWeightLiquidBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTargetWeightLiquidBatching.Location = New System.Drawing.Point(610, 795)
         Me.lblTargetWeightLiquidBatching.Name = "lblTargetWeightLiquidBatching"
         Me.lblTargetWeightLiquidBatching.Size = New System.Drawing.Size(178, 35)
@@ -1051,7 +1052,7 @@ Partial Class Form1
         'lblCurrentWeightLiquidBatching
         '
         Me.lblCurrentWeightLiquidBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblCurrentWeightLiquidBatching.Font = New System.Drawing.Font("Open Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCurrentWeightLiquidBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCurrentWeightLiquidBatching.Location = New System.Drawing.Point(610, 734)
         Me.lblCurrentWeightLiquidBatching.Name = "lblCurrentWeightLiquidBatching"
         Me.lblCurrentWeightLiquidBatching.Size = New System.Drawing.Size(178, 61)
@@ -1062,7 +1063,7 @@ Partial Class Form1
         'Label34
         '
         Me.Label34.BackColor = System.Drawing.Color.Transparent
-        Me.Label34.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label34.Location = New System.Drawing.Point(267, 918)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(132, 23)
@@ -1073,7 +1074,7 @@ Partial Class Form1
         'Label33
         '
         Me.Label33.BackColor = System.Drawing.Color.Transparent
-        Me.Label33.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.Location = New System.Drawing.Point(267, 792)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(132, 23)
@@ -1084,7 +1085,7 @@ Partial Class Form1
         'lblMolassesWeightBatching
         '
         Me.lblMolassesWeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblMolassesWeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMolassesWeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMolassesWeightBatching.Location = New System.Drawing.Point(592, 959)
         Me.lblMolassesWeightBatching.Name = "lblMolassesWeightBatching"
         Me.lblMolassesWeightBatching.Size = New System.Drawing.Size(74, 23)
@@ -1095,7 +1096,7 @@ Partial Class Form1
         'Label32
         '
         Me.Label32.BackColor = System.Drawing.Color.Transparent
-        Me.Label32.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.Location = New System.Drawing.Point(592, 931)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(74, 23)
@@ -1106,7 +1107,7 @@ Partial Class Form1
         'lblCocoOilWeightBatching
         '
         Me.lblCocoOilWeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblCocoOilWeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCocoOilWeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCocoOilWeightBatching.Location = New System.Drawing.Point(690, 959)
         Me.lblCocoOilWeightBatching.Name = "lblCocoOilWeightBatching"
         Me.lblCocoOilWeightBatching.Size = New System.Drawing.Size(74, 23)
@@ -1117,7 +1118,7 @@ Partial Class Form1
         'Label30
         '
         Me.Label30.BackColor = System.Drawing.Color.Transparent
-        Me.Label30.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.Location = New System.Drawing.Point(690, 931)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(74, 23)
@@ -1128,7 +1129,7 @@ Partial Class Form1
         'lblSilo8WeightBatching
         '
         Me.lblSilo8WeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo8WeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo8WeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo8WeightBatching.Location = New System.Drawing.Point(676, 330)
         Me.lblSilo8WeightBatching.Name = "lblSilo8WeightBatching"
         Me.lblSilo8WeightBatching.Size = New System.Drawing.Size(109, 23)
@@ -1139,7 +1140,7 @@ Partial Class Form1
         'lblSilo8RawMatsBatching
         '
         Me.lblSilo8RawMatsBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo8RawMatsBatching.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo8RawMatsBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo8RawMatsBatching.Location = New System.Drawing.Point(676, 302)
         Me.lblSilo8RawMatsBatching.Name = "lblSilo8RawMatsBatching"
         Me.lblSilo8RawMatsBatching.Size = New System.Drawing.Size(109, 23)
@@ -1150,7 +1151,7 @@ Partial Class Form1
         'Label28
         '
         Me.Label28.BackColor = System.Drawing.Color.Transparent
-        Me.Label28.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.Location = New System.Drawing.Point(676, 274)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(109, 23)
@@ -1161,7 +1162,7 @@ Partial Class Form1
         'lblSilo7WeightBatching
         '
         Me.lblSilo7WeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo7WeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo7WeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo7WeightBatching.Location = New System.Drawing.Point(555, 330)
         Me.lblSilo7WeightBatching.Name = "lblSilo7WeightBatching"
         Me.lblSilo7WeightBatching.Size = New System.Drawing.Size(109, 23)
@@ -1172,7 +1173,7 @@ Partial Class Form1
         'lblSilo7RawMatsBatching
         '
         Me.lblSilo7RawMatsBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo7RawMatsBatching.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo7RawMatsBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo7RawMatsBatching.Location = New System.Drawing.Point(555, 302)
         Me.lblSilo7RawMatsBatching.Name = "lblSilo7RawMatsBatching"
         Me.lblSilo7RawMatsBatching.Size = New System.Drawing.Size(109, 23)
@@ -1183,7 +1184,7 @@ Partial Class Form1
         'Label25
         '
         Me.Label25.BackColor = System.Drawing.Color.Transparent
-        Me.Label25.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.Location = New System.Drawing.Point(555, 274)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(109, 23)
@@ -1194,7 +1195,7 @@ Partial Class Form1
         'lblSilo6WeightBatching
         '
         Me.lblSilo6WeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo6WeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo6WeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo6WeightBatching.Location = New System.Drawing.Point(434, 330)
         Me.lblSilo6WeightBatching.Name = "lblSilo6WeightBatching"
         Me.lblSilo6WeightBatching.Size = New System.Drawing.Size(109, 23)
@@ -1205,7 +1206,7 @@ Partial Class Form1
         'lblSilo6RawMatsBatching
         '
         Me.lblSilo6RawMatsBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo6RawMatsBatching.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo6RawMatsBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo6RawMatsBatching.Location = New System.Drawing.Point(434, 302)
         Me.lblSilo6RawMatsBatching.Name = "lblSilo6RawMatsBatching"
         Me.lblSilo6RawMatsBatching.Size = New System.Drawing.Size(109, 23)
@@ -1216,7 +1217,7 @@ Partial Class Form1
         'Label22
         '
         Me.Label22.BackColor = System.Drawing.Color.Transparent
-        Me.Label22.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.Location = New System.Drawing.Point(434, 274)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(109, 23)
@@ -1227,7 +1228,7 @@ Partial Class Form1
         'lblSilo5WeightBatching
         '
         Me.lblSilo5WeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo5WeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo5WeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo5WeightBatching.Location = New System.Drawing.Point(313, 330)
         Me.lblSilo5WeightBatching.Name = "lblSilo5WeightBatching"
         Me.lblSilo5WeightBatching.Size = New System.Drawing.Size(109, 23)
@@ -1238,7 +1239,7 @@ Partial Class Form1
         'lblSilo5RawMatsBatching
         '
         Me.lblSilo5RawMatsBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo5RawMatsBatching.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo5RawMatsBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo5RawMatsBatching.Location = New System.Drawing.Point(313, 302)
         Me.lblSilo5RawMatsBatching.Name = "lblSilo5RawMatsBatching"
         Me.lblSilo5RawMatsBatching.Size = New System.Drawing.Size(109, 23)
@@ -1249,7 +1250,7 @@ Partial Class Form1
         'Label19
         '
         Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(313, 274)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(109, 23)
@@ -1260,7 +1261,7 @@ Partial Class Form1
         'lblSilo4WeightBatching
         '
         Me.lblSilo4WeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo4WeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo4WeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo4WeightBatching.Location = New System.Drawing.Point(676, 90)
         Me.lblSilo4WeightBatching.Name = "lblSilo4WeightBatching"
         Me.lblSilo4WeightBatching.Size = New System.Drawing.Size(109, 23)
@@ -1271,7 +1272,7 @@ Partial Class Form1
         'lblSilo4RawMatsBatching
         '
         Me.lblSilo4RawMatsBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo4RawMatsBatching.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo4RawMatsBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo4RawMatsBatching.Location = New System.Drawing.Point(676, 62)
         Me.lblSilo4RawMatsBatching.Name = "lblSilo4RawMatsBatching"
         Me.lblSilo4RawMatsBatching.Size = New System.Drawing.Size(109, 23)
@@ -1282,7 +1283,7 @@ Partial Class Form1
         'Label16
         '
         Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(676, 34)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(109, 23)
@@ -1293,7 +1294,7 @@ Partial Class Form1
         'lblSilo3WeightBatching
         '
         Me.lblSilo3WeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo3WeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo3WeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo3WeightBatching.Location = New System.Drawing.Point(555, 90)
         Me.lblSilo3WeightBatching.Name = "lblSilo3WeightBatching"
         Me.lblSilo3WeightBatching.Size = New System.Drawing.Size(109, 23)
@@ -1304,7 +1305,7 @@ Partial Class Form1
         'lblSilo3RawMatsBatching
         '
         Me.lblSilo3RawMatsBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo3RawMatsBatching.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo3RawMatsBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo3RawMatsBatching.Location = New System.Drawing.Point(555, 62)
         Me.lblSilo3RawMatsBatching.Name = "lblSilo3RawMatsBatching"
         Me.lblSilo3RawMatsBatching.Size = New System.Drawing.Size(109, 23)
@@ -1315,7 +1316,7 @@ Partial Class Form1
         'Label13
         '
         Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(555, 34)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(109, 23)
@@ -1326,7 +1327,7 @@ Partial Class Form1
         'lblSilo2WeightBatching
         '
         Me.lblSilo2WeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo2WeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo2WeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo2WeightBatching.Location = New System.Drawing.Point(434, 90)
         Me.lblSilo2WeightBatching.Name = "lblSilo2WeightBatching"
         Me.lblSilo2WeightBatching.Size = New System.Drawing.Size(109, 23)
@@ -1337,7 +1338,7 @@ Partial Class Form1
         'lblSilo2RawMatsBatching
         '
         Me.lblSilo2RawMatsBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo2RawMatsBatching.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo2RawMatsBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo2RawMatsBatching.Location = New System.Drawing.Point(434, 62)
         Me.lblSilo2RawMatsBatching.Name = "lblSilo2RawMatsBatching"
         Me.lblSilo2RawMatsBatching.Size = New System.Drawing.Size(109, 23)
@@ -1348,7 +1349,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(434, 34)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(109, 23)
@@ -1359,7 +1360,7 @@ Partial Class Form1
         'lblSilo1WeightBatching
         '
         Me.lblSilo1WeightBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo1WeightBatching.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo1WeightBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo1WeightBatching.Location = New System.Drawing.Point(313, 90)
         Me.lblSilo1WeightBatching.Name = "lblSilo1WeightBatching"
         Me.lblSilo1WeightBatching.Size = New System.Drawing.Size(109, 23)
@@ -1370,7 +1371,7 @@ Partial Class Form1
         'lblSilo1RawMatsBatching
         '
         Me.lblSilo1RawMatsBatching.BackColor = System.Drawing.Color.Transparent
-        Me.lblSilo1RawMatsBatching.Font = New System.Drawing.Font("Open Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSilo1RawMatsBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSilo1RawMatsBatching.Location = New System.Drawing.Point(313, 62)
         Me.lblSilo1RawMatsBatching.Name = "lblSilo1RawMatsBatching"
         Me.lblSilo1RawMatsBatching.Size = New System.Drawing.Size(109, 23)
@@ -1381,7 +1382,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(313, 34)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(109, 23)
@@ -1460,7 +1461,7 @@ Partial Class Form1
         'lblFormulaMatSilo8
         '
         Me.lblFormulaMatSilo8.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo8.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaMatSilo8.Location = New System.Drawing.Point(268, 601)
         Me.lblFormulaMatSilo8.Name = "lblFormulaMatSilo8"
         Me.lblFormulaMatSilo8.Size = New System.Drawing.Size(158, 23)
@@ -1471,7 +1472,7 @@ Partial Class Form1
         'lblFormulaMatSilo7
         '
         Me.lblFormulaMatSilo7.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo7.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaMatSilo7.Location = New System.Drawing.Point(37, 601)
         Me.lblFormulaMatSilo7.Name = "lblFormulaMatSilo7"
         Me.lblFormulaMatSilo7.Size = New System.Drawing.Size(158, 23)
@@ -1482,7 +1483,7 @@ Partial Class Form1
         'lblFormulaMatSilo6
         '
         Me.lblFormulaMatSilo6.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo6.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaMatSilo6.Location = New System.Drawing.Point(268, 492)
         Me.lblFormulaMatSilo6.Name = "lblFormulaMatSilo6"
         Me.lblFormulaMatSilo6.Size = New System.Drawing.Size(158, 23)
@@ -1493,7 +1494,7 @@ Partial Class Form1
         'lblFormulaMatSilo5
         '
         Me.lblFormulaMatSilo5.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo5.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaMatSilo5.Location = New System.Drawing.Point(37, 492)
         Me.lblFormulaMatSilo5.Name = "lblFormulaMatSilo5"
         Me.lblFormulaMatSilo5.Size = New System.Drawing.Size(158, 23)
@@ -1504,7 +1505,7 @@ Partial Class Form1
         'lblFormulaMatSilo4
         '
         Me.lblFormulaMatSilo4.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo4.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaMatSilo4.Location = New System.Drawing.Point(268, 383)
         Me.lblFormulaMatSilo4.Name = "lblFormulaMatSilo4"
         Me.lblFormulaMatSilo4.Size = New System.Drawing.Size(158, 23)
@@ -1515,7 +1516,7 @@ Partial Class Form1
         'lblFormulaMatSilo3
         '
         Me.lblFormulaMatSilo3.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo3.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaMatSilo3.Location = New System.Drawing.Point(37, 383)
         Me.lblFormulaMatSilo3.Name = "lblFormulaMatSilo3"
         Me.lblFormulaMatSilo3.Size = New System.Drawing.Size(158, 23)
@@ -1526,7 +1527,7 @@ Partial Class Form1
         'lblFormulaMatSilo2
         '
         Me.lblFormulaMatSilo2.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo2.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaMatSilo2.Location = New System.Drawing.Point(268, 274)
         Me.lblFormulaMatSilo2.Name = "lblFormulaMatSilo2"
         Me.lblFormulaMatSilo2.Size = New System.Drawing.Size(158, 23)
@@ -1537,7 +1538,7 @@ Partial Class Form1
         'lblFormulaMatSilo1
         '
         Me.lblFormulaMatSilo1.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaMatSilo1.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaMatSilo1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaMatSilo1.Location = New System.Drawing.Point(37, 274)
         Me.lblFormulaMatSilo1.Name = "lblFormulaMatSilo1"
         Me.lblFormulaMatSilo1.Size = New System.Drawing.Size(158, 23)
@@ -1548,7 +1549,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Open Sans", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(35, 44)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(326, 41)
@@ -1559,18 +1560,18 @@ Partial Class Form1
         'cmbFormula
         '
         Me.cmbFormula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbFormula.Font = New System.Drawing.Font("Open Sans SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbFormula.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbFormula.FormattingEnabled = True
         Me.cmbFormula.Location = New System.Drawing.Point(37, 101)
         Me.cmbFormula.MaxDropDownItems = 10
         Me.cmbFormula.Name = "cmbFormula"
-        Me.cmbFormula.Size = New System.Drawing.Size(326, 36)
+        Me.cmbFormula.Size = New System.Drawing.Size(326, 33)
         Me.cmbFormula.TabIndex = 53
         '
         'lblFormulaId
         '
         Me.lblFormulaId.BackColor = System.Drawing.Color.Transparent
-        Me.lblFormulaId.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormulaId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormulaId.Location = New System.Drawing.Point(327, 189)
         Me.lblFormulaId.Name = "lblFormulaId"
         Me.lblFormulaId.Size = New System.Drawing.Size(77, 23)
@@ -1581,7 +1582,7 @@ Partial Class Form1
         'Label47
         '
         Me.Label47.BackColor = System.Drawing.Color.Transparent
-        Me.Label47.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label47.Location = New System.Drawing.Point(284, 189)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(37, 23)
@@ -1687,7 +1688,7 @@ Partial Class Form1
         'Label45
         '
         Me.Label45.BackColor = System.Drawing.Color.Transparent
-        Me.Label45.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.Location = New System.Drawing.Point(268, 707)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(158, 23)
@@ -1702,7 +1703,7 @@ Partial Class Form1
         Me.txtbCocoOilWeight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbCocoOilWeight.BorderThickness = 3
         Me.txtbCocoOilWeight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbCocoOilWeight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbCocoOilWeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbCocoOilWeight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbCocoOilWeight.isPassword = False
         Me.txtbCocoOilWeight.Location = New System.Drawing.Point(268, 738)
@@ -1716,7 +1717,7 @@ Partial Class Form1
         'Label46
         '
         Me.Label46.BackColor = System.Drawing.Color.Transparent
-        Me.Label46.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label46.Location = New System.Drawing.Point(37, 707)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(158, 23)
@@ -1731,7 +1732,7 @@ Partial Class Form1
         Me.txtbMolassesWeight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbMolassesWeight.BorderThickness = 3
         Me.txtbMolassesWeight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbMolassesWeight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbMolassesWeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbMolassesWeight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbMolassesWeight.isPassword = False
         Me.txtbMolassesWeight.Location = New System.Drawing.Point(37, 738)
@@ -1745,7 +1746,7 @@ Partial Class Form1
         'Label43
         '
         Me.Label43.BackColor = System.Drawing.Color.Transparent
-        Me.Label43.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label43.Location = New System.Drawing.Point(268, 577)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(158, 23)
@@ -1760,7 +1761,7 @@ Partial Class Form1
         Me.txtbSilo8Weight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbSilo8Weight.BorderThickness = 3
         Me.txtbSilo8Weight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbSilo8Weight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbSilo8Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbSilo8Weight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbSilo8Weight.isPassword = False
         Me.txtbSilo8Weight.Location = New System.Drawing.Point(268, 625)
@@ -1774,7 +1775,7 @@ Partial Class Form1
         'Label44
         '
         Me.Label44.BackColor = System.Drawing.Color.Transparent
-        Me.Label44.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label44.Location = New System.Drawing.Point(37, 577)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(158, 23)
@@ -1789,7 +1790,7 @@ Partial Class Form1
         Me.txtbSilo7Weight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbSilo7Weight.BorderThickness = 3
         Me.txtbSilo7Weight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbSilo7Weight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbSilo7Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbSilo7Weight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbSilo7Weight.isPassword = False
         Me.txtbSilo7Weight.Location = New System.Drawing.Point(37, 625)
@@ -1803,7 +1804,7 @@ Partial Class Form1
         'Label41
         '
         Me.Label41.BackColor = System.Drawing.Color.Transparent
-        Me.Label41.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label41.Location = New System.Drawing.Point(268, 468)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(158, 23)
@@ -1818,7 +1819,7 @@ Partial Class Form1
         Me.txtbSilo6Weight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbSilo6Weight.BorderThickness = 3
         Me.txtbSilo6Weight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbSilo6Weight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbSilo6Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbSilo6Weight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbSilo6Weight.isPassword = False
         Me.txtbSilo6Weight.Location = New System.Drawing.Point(268, 516)
@@ -1832,7 +1833,7 @@ Partial Class Form1
         'Label42
         '
         Me.Label42.BackColor = System.Drawing.Color.Transparent
-        Me.Label42.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.Location = New System.Drawing.Point(37, 468)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(158, 23)
@@ -1847,7 +1848,7 @@ Partial Class Form1
         Me.txtbSilo5Weight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbSilo5Weight.BorderThickness = 3
         Me.txtbSilo5Weight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbSilo5Weight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbSilo5Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbSilo5Weight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbSilo5Weight.isPassword = False
         Me.txtbSilo5Weight.Location = New System.Drawing.Point(37, 516)
@@ -1861,7 +1862,7 @@ Partial Class Form1
         'Label39
         '
         Me.Label39.BackColor = System.Drawing.Color.Transparent
-        Me.Label39.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.Location = New System.Drawing.Point(268, 359)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(158, 23)
@@ -1876,7 +1877,7 @@ Partial Class Form1
         Me.txtbSilo4Weight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbSilo4Weight.BorderThickness = 3
         Me.txtbSilo4Weight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbSilo4Weight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbSilo4Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbSilo4Weight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbSilo4Weight.isPassword = False
         Me.txtbSilo4Weight.Location = New System.Drawing.Point(268, 407)
@@ -1890,7 +1891,7 @@ Partial Class Form1
         'Label40
         '
         Me.Label40.BackColor = System.Drawing.Color.Transparent
-        Me.Label40.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label40.Location = New System.Drawing.Point(37, 359)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(158, 23)
@@ -1905,7 +1906,7 @@ Partial Class Form1
         Me.txtbSilo3Weight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbSilo3Weight.BorderThickness = 3
         Me.txtbSilo3Weight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbSilo3Weight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbSilo3Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbSilo3Weight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbSilo3Weight.isPassword = False
         Me.txtbSilo3Weight.Location = New System.Drawing.Point(37, 407)
@@ -1919,7 +1920,7 @@ Partial Class Form1
         'Label38
         '
         Me.Label38.BackColor = System.Drawing.Color.Transparent
-        Me.Label38.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.Location = New System.Drawing.Point(268, 250)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(158, 23)
@@ -1934,7 +1935,7 @@ Partial Class Form1
         Me.txtbSilo2Weight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbSilo2Weight.BorderThickness = 3
         Me.txtbSilo2Weight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbSilo2Weight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbSilo2Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbSilo2Weight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbSilo2Weight.isPassword = False
         Me.txtbSilo2Weight.Location = New System.Drawing.Point(268, 298)
@@ -1948,7 +1949,7 @@ Partial Class Form1
         'Label37
         '
         Me.Label37.BackColor = System.Drawing.Color.Transparent
-        Me.Label37.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label37.Location = New System.Drawing.Point(37, 250)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(158, 23)
@@ -1963,7 +1964,7 @@ Partial Class Form1
         Me.txtbSilo1Weight.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbSilo1Weight.BorderThickness = 3
         Me.txtbSilo1Weight.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbSilo1Weight.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbSilo1Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbSilo1Weight.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbSilo1Weight.isPassword = False
         Me.txtbSilo1Weight.Location = New System.Drawing.Point(37, 298)
@@ -1977,7 +1978,7 @@ Partial Class Form1
         'Label36
         '
         Me.Label36.BackColor = System.Drawing.Color.Transparent
-        Me.Label36.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.Location = New System.Drawing.Point(37, 140)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(230, 23)
@@ -1992,7 +1993,7 @@ Partial Class Form1
         Me.txtbFormulaName.BorderColorMouseHover = System.Drawing.Color.LimeGreen
         Me.txtbFormulaName.BorderThickness = 3
         Me.txtbFormulaName.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbFormulaName.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbFormulaName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbFormulaName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbFormulaName.isPassword = False
         Me.txtbFormulaName.Location = New System.Drawing.Point(37, 171)
