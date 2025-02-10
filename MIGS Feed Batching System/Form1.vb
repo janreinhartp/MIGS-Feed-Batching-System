@@ -145,7 +145,7 @@ Public Class Form1
                     Master_Station.WriteSingleCoil(SLAVE_ADDRESS, i, commandPLC(i))
                     recentCommandPLC(i) = commandPLC(i)
                 Catch ex As Exception
-                    ReportError(ex.Message)
+                    'ReportError(ex.Message)
                 End Try
             End If
         Next
@@ -204,7 +204,7 @@ Public Class Form1
                 inputPLC(i) = Convert.ToBoolean(input_register(i))
             Next
         Catch ex As Exception
-            ReportError(ex.Message)
+            ' ReportError(ex.Message)
         End Try
     End Sub
 
@@ -430,7 +430,7 @@ Public Class Form1
         Try
             If (IF_Connected = False) Then
                 IF_Connected = True
-                srlPLC = New SerialPort("COM10", 9600, Parity.None, 8, 1)
+                srlPLC = New SerialPort("COM4", 9600, Parity.None, 8, 1)
                 srlPLC.Open() 'Open 
                 Master_Station = ModbusSerialMaster.CreateRtu(srlPLC)
                 Master_Station.Transport.ReadTimeout = 500
@@ -444,7 +444,7 @@ Public Class Form1
                 srlPLC.Close() 'Close COM port
             End If
         Catch ex As Exception
-            ReportError(ex.Message)
+            'ReportError(ex.Message)
         End Try
 
     End Sub
@@ -624,6 +624,7 @@ Public Class Form1
             btnMixerTimer.color = Color.SeaGreen
             btnTopGate.Enabled = True
             btnBottomGate.Enabled = True
+            btnSprayPump.Enabled = False
         Else
             lblTimeMixerRemain.Text = remainingTime.ToString("hh\:mm\:ss")
         End If
@@ -637,6 +638,7 @@ Public Class Form1
                 tmrMixer.Start()
                 btnTopGate.Enabled = False
                 btnBottomGate.Enabled = False
+                btnSprayPump.Enabled = True
             Else
                 MessageBox.Show("Invalid time format. Please enter time in the format 'hh:mm:ss'.")
             End If
@@ -648,6 +650,15 @@ Public Class Form1
             btnMixerTimer.color = Color.SeaGreen
             btnTopGate.Enabled = True
             btnBottomGate.Enabled = True
+
+            timeSpray.Stop()
+            tmrSpray.Stop()
+            lblTimerSprayRemain.Text = "00:00:00"
+            btnSprayPump.color = Color.SeaGreen
+            btnDischarge.Enabled = True
+            commandPLC(9) = 0
+
+            btnSprayPump.Enabled = False
         End If
 
     End Sub
