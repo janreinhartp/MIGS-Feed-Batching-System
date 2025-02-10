@@ -312,5 +312,8 @@
   <ItemGroup>
     <None Include="Resources\SUCCESS-100.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="feedmill_tblformula.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
