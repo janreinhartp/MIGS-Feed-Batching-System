@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("COM3")>  _
         Public Property ComPortPLC() As String
             Get
                 Return CType(Me("ComPortPLC"),String)
@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("COM4")>  _
         Public Property ComPortDryScale() As String
             Get
                 Return CType(Me("ComPortDryScale"),String)
@@ -80,7 +80,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("COM5")>  _
         Public Property ComportLiquidScale() As String
             Get
                 Return CType(Me("ComportLiquidScale"),String)
@@ -183,6 +183,126 @@ Namespace My
             End Get
             Set
                 Me("Silo8Material") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentSilo1() As Double
+            Get
+                Return CType(Me("AdjustmentSilo1"),Double)
+            End Get
+            Set
+                Me("AdjustmentSilo1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentSilo2() As Double
+            Get
+                Return CType(Me("AdjustmentSilo2"),Double)
+            End Get
+            Set
+                Me("AdjustmentSilo2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentSilo3() As Double
+            Get
+                Return CType(Me("AdjustmentSilo3"),Double)
+            End Get
+            Set
+                Me("AdjustmentSilo3") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentSilo4() As Double
+            Get
+                Return CType(Me("AdjustmentSilo4"),Double)
+            End Get
+            Set
+                Me("AdjustmentSilo4") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentSilo5() As Double
+            Get
+                Return CType(Me("AdjustmentSilo5"),Double)
+            End Get
+            Set
+                Me("AdjustmentSilo5") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentSilo6() As Double
+            Get
+                Return CType(Me("AdjustmentSilo6"),Double)
+            End Get
+            Set
+                Me("AdjustmentSilo6") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentSilo7() As Double
+            Get
+                Return CType(Me("AdjustmentSilo7"),Double)
+            End Get
+            Set
+                Me("AdjustmentSilo7") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentSilo8() As Double
+            Get
+                Return CType(Me("AdjustmentSilo8"),Double)
+            End Get
+            Set
+                Me("AdjustmentSilo8") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentMolasses() As Double
+            Get
+                Return CType(Me("AdjustmentMolasses"),Double)
+            End Get
+            Set
+                Me("AdjustmentMolasses") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property AdjustmentCocoOil() As Double
+            Get
+                Return CType(Me("AdjustmentCocoOil"),Double)
+            End Get
+            Set
+                Me("AdjustmentCocoOil") = value
             End Set
         End Property
     End Class

@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="ComPortPLC" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">COM3</Value>
     </Setting>
     <Setting Name="ComPortDryScale" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">COM4</Value>
     </Setting>
     <Setting Name="ComportLiquidScale" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">COM5</Value>
     </Setting>
     <Setting Name="Silo1Material" Type="System.String" Scope="User">
       <Value Profile="(Default)">CORN FINE</Value>
@@ -34,6 +34,36 @@
     </Setting>
     <Setting Name="Silo8Material" Type="System.String" Scope="User">
       <Value Profile="(Default)">COPRA</Value>
+    </Setting>
+    <Setting Name="AdjustmentSilo1" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentSilo2" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentSilo3" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentSilo4" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentSilo5" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentSilo6" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentSilo7" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentSilo8" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentMolasses" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdjustmentCocoOil" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

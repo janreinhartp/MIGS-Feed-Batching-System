@@ -21,7 +21,7 @@ Module Batching
                     Form1.commandPLC(0) = 1
 
                     Do
-                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry - My.Settings.AdjustmentSilo1 AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -39,7 +39,7 @@ Module Batching
                 Case 2
                     Form1.commandPLC(1) = 1
                     Do
-                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry - My.Settings.AdjustmentSilo2 AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -55,7 +55,7 @@ Module Batching
                 Case 3
                     Form1.commandPLC(2) = 1
                     Do
-                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry - My.Settings.AdjustmentSilo3 AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -70,7 +70,7 @@ Module Batching
                 Case 4
                     Form1.commandPLC(3) = 1
                     Do
-                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry - My.Settings.AdjustmentSilo4 AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -86,7 +86,7 @@ Module Batching
                 Case 5
                     Form1.commandPLC(4) = 1
                     Do
-                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry - My.Settings.AdjustmentSilo5 AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -102,7 +102,7 @@ Module Batching
                 Case 6
                     Form1.commandPLC(5) = 1
                     Do
-                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry - My.Settings.AdjustmentSilo6 AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -118,7 +118,7 @@ Module Batching
                 Case 7
                     Form1.commandPLC(6) = 1
                     Do
-                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry - My.Settings.AdjustmentSilo7 AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -133,7 +133,7 @@ Module Batching
                 Case 8
                     Form1.commandPLC(7) = 1
                     Do
-                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadDry >= Form1.currentTargetWeightDry - My.Settings.AdjustmentSilo8 AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -158,7 +158,7 @@ Module Batching
                 Case 1
                     Form1.commandPLC(10) = 1
                     Do
-                        If Form1.binCurrentLoadWet >= Form1.currentTargetWeightWet AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadWet >= Form1.currentTargetWeightWet - My.Settings.AdjustmentCocoOil AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms
@@ -174,7 +174,7 @@ Module Batching
                 Case 2
                     Form1.commandPLC(11) = 1
                     Do
-                        If Form1.binCurrentLoadWet >= Form1.currentTargetWeightWet AndAlso Not token.IsCancellationRequested Then
+                        If Form1.binCurrentLoadWet >= Form1.currentTargetWeightWet - My.Settings.AdjustmentMolasses AndAlso Not token.IsCancellationRequested Then
                             Exit Do
                         Else
                             Await Task.Delay(100) ' Check every 100ms

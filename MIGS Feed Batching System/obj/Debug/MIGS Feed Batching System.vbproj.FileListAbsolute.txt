@@ -98,3 +98,5 @@ C:\Users\MasterMix Feedmill\Source\Repos\MIGS-Feed-Batching-System\MIGS Feed Bat
 C:\Users\MasterMix Feedmill\Source\Repos\MIGS-Feed-Batching-System\MIGS Feed Batching System\obj\Debug\MIGS Feed Batching System.exe
 C:\Users\MasterMix Feedmill\Source\Repos\MIGS-Feed-Batching-System\MIGS Feed Batching System\obj\Debug\MIGS Feed Batching System.xml
 C:\Users\MasterMix Feedmill\Source\Repos\MIGS-Feed-Batching-System\MIGS Feed Batching System\obj\Debug\MIGS Feed Batching System.pdb
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\obj\Debug\MIGS_Feed_Batching_System.frmSettings.resources
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\obj\Debug\MIGS_Feed_Batching_System.LoadingScreen.resources
