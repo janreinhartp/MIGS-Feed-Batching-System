@@ -145,7 +145,7 @@ Public Class Form1
                     Master_Station.WriteSingleCoil(SLAVE_ADDRESS, i, commandPLC(i))
                     recentCommandPLC(i) = commandPLC(i)
                 Catch ex As Exception
-                    'ReportError(ex.Message)
+                    ReportError(ex.Message)
                 End Try
             End If
         Next
@@ -156,7 +156,7 @@ Public Class Form1
     End Sub
 
     Public Sub loadScales()
-        srlDryScale.PortName = "COM4"
+        srlDryScale.PortName = "COM5"
         srlDryScale.BaudRate = "9600"
 
         srlLiquidScale.PortName = "COM3"
@@ -170,7 +170,7 @@ Public Class Form1
             'btnStartBatching.Enabled = False
         End Try
         Try
-            srlLiquidScale.Open()
+            '     srlLiquidScale.Open()
             '  MsgBox("Connected")
         Catch ex As Exception
             MsgBox("Please Contact the Administrator" + " " + ex.Message)
@@ -204,7 +204,7 @@ Public Class Form1
                 inputPLC(i) = Convert.ToBoolean(input_register(i))
             Next
         Catch ex As Exception
-            ' ReportError(ex.Message)
+            ReportError(ex.Message)
         End Try
     End Sub
 
