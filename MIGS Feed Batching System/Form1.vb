@@ -483,10 +483,10 @@ Public Class Form1
     'Reading of Scales
 
     Public Sub loadScales()
-        srlDryScale.PortName = "COM4"
+        srlDryScale.PortName = "COM5"
         srlDryScale.BaudRate = "9600"
 
-        srlLiquidScale.PortName = "COM3"
+        srlLiquidScale.PortName = "COM6"
         srlLiquidScale.BaudRate = "9600"
 
         Try
