@@ -165,7 +165,7 @@ Public Class Form1
                     Master_Station.WriteSingleCoil(SLAVE_ADDRESS, i, commandPLC(i))
                     recentCommandPLC(i) = commandPLC(i)
                 Catch ex As Exception
-                    'ReportError(ex.Message)
+                    ReportError(ex.Message)
                 End Try
             End If
         Next
@@ -191,7 +191,7 @@ Public Class Form1
                 inputPLC(i) = Convert.ToBoolean(input_register(i))
             Next
         Catch ex As Exception
-            ' ReportError(ex.Message)
+            ReportError(ex.Message)
         End Try
     End Sub
 
