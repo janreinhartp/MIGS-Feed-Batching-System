@@ -82,6 +82,7 @@ Public Class Form1
 
         timeSpray = New Stopwatch()
         timeMixer = New Stopwatch()
+
         InitializeAddress()
         connectPLC()
         ' loadScales()
@@ -108,14 +109,10 @@ Public Class Form1
 
         For i As Integer = 0 To 19
             commandPLC(i) = False
-            Console.Write("Command " + i.ToString + " : ")
-            Console.WriteLine(commandPLC(i).ToString)
         Next
 
         For i As Integer = 0 To 19
             recentCommandPLC(i) = False
-            Console.Write("Recent " + i.ToString + " : ")
-            Console.WriteLine(recentCommandPLC(i).ToString)
         Next
     End Sub
 
@@ -138,6 +135,29 @@ Public Class Form1
         lblFormulaMatSilo8.Text = My.Settings.Silo8Material
     End Sub
 
+    ' Connect and R/W PLC
+    Sub connectPLC()
+        Try
+            If (IF_Connected = False) Then
+                IF_Connected = True
+                srlPLC = New SerialPort("COM4", 9600, Parity.None, 8, 1)
+                srlPLC.Open()
+                Master_Station = ModbusSerialMaster.CreateRtu(srlPLC)
+                Master_Station.Transport.ReadTimeout = 500
+                Master_Station.Transport.WriteTimeout = 500
+                Master_Station.Transport.Retries = 0
+                tmrPLC.Start()
+            ElseIf (IF_Connected = True) Then
+                IF_Connected = False
+                tmrPLC.Stop()
+                srlPLC.Close()
+            End If
+        Catch ex As Exception
+            'ReportError(ex.Message)
+        End Try
+
+    End Sub
+
     Public Sub writeCoils()
         For i As Integer = 0 To 19
             If commandPLC(i) <> recentCommandPLC(i) Then
@@ -155,35 +175,6 @@ Public Class Form1
         MessageBox.Show(s)
     End Sub
 
-    Public Sub loadScales()
-        srlDryScale.PortName = "COM5"
-        srlDryScale.BaudRate = "9600"
-
-        srlLiquidScale.PortName = "COM3"
-        srlLiquidScale.BaudRate = "9600"
-
-        Try
-            srlDryScale.Open()
-            ' MsgBox("Connected")
-        Catch ex As Exception
-            MsgBox("Please Contact the Administrator" + " " + ex.Message)
-            'btnStartBatching.Enabled = False
-        End Try
-        Try
-            '     srlLiquidScale.Open()
-            '  MsgBox("Connected")
-        Catch ex As Exception
-            MsgBox("Please Contact the Administrator" + " " + ex.Message)
-            'btnStartBatching.Enabled = False
-        End Try
-
-    End Sub
-
-
-    Private Sub conBatchScale_DataReceived(sender As System.Object, e As System.IO.Ports.SerialDataReceivedEventArgs) Handles srlDryScale.DataReceived
-        receivedText(srlDryScale.ReadExisting())
-    End Sub
-
     Private Sub tmrPLC_Tick(sender As Object, e As EventArgs) Handles tmrPLC.Tick
         writeCoils()
 
@@ -191,16 +182,12 @@ Public Class Form1
             Dim holding_register As Boolean() = Master_Station.ReadCoils(SLAVE_ADDRESS, 0, 20) ' Read holding FC03
 
             For i As Integer = 0 To 19
-                'Console.Write("Read Coil " + i.ToString + " : ")
-                'Console.WriteLine(holding_register(i))
                 recentCommandPLC(i) = Convert.ToBoolean(holding_register(i))
             Next
 
             Dim input_register As Boolean() = Master_Station.ReadCoils(SLAVE_ADDRESS, 20, 20) ' Read holding FC03
 
             For i As Integer = 0 To 19
-                'Console.Write("input read " + i.ToString + " : ")
-                'Console.WriteLine(input_register(i))
                 inputPLC(i) = Convert.ToBoolean(input_register(i))
             Next
         Catch ex As Exception
@@ -208,18 +195,10 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub drpdownFormulaBatching_onItemSelected(sender As Object, e As EventArgs)
-
-    End Sub
-
-
-
+    ' Formula Functions
     Private Sub btnRefreshFormulaBatching_Click(sender As Object, e As EventArgs) Handles btnRefreshFormulaBatching.Click
         RefreshFormulaList()
     End Sub
-
-
-
     Private Sub cmbFormulaBatching_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFormulaBatching.SelectedIndexChanged
         Console.WriteLine(cmbFormulaBatching.SelectedIndex)
         currentFormulaBatching = New formula(formulaList.Find(Function(name) name.FormulaName = cmbFormulaBatching.Text).Id,
@@ -247,154 +226,6 @@ Public Class Form1
         lblMolassesWeightBatching.Text = currentFormulaBatching.Molasses
         lblCocoOilWeightBatching.Text = currentFormulaBatching.CocoOil
     End Sub
-    Public Sub CallToast(ByVal caption As String, ByVal description As String)
-        Dim toast = New ToastBuilder(Me).SetCaption(caption).SetDescription(description).SetDuration(5000).SetMuting(False).Build()
-        toast.Show()
-    End Sub
-
-
-
-
-    Private Async Sub btnStartStopBatching_Click(sender As Object, e As EventArgs) Handles btnStartStopBatching.Click
-        If dryCancellationTokenSource Is Nothing AndAlso liquidCancellationTokenSource Is Nothing Then
-            dryCancellationTokenSource = New CancellationTokenSource()
-            liquidCancellationTokenSource = New CancellationTokenSource()
-
-            statusDry = 1
-            statusWet = 1
-            currentTargetWeightDry = currentFormulaBatching.Silo1
-            currentTargetWeightWet = currentFormulaBatching.Molasses
-
-            lblCurrentSilo.Text = "Silo 1"
-            lblCurrentTargetWeightDry.Text = currentTargetWeightDry
-
-            lblCurrentPump.Text = "Coco Oil"
-            lblCurrentTargetWeightLiquid.Text = currentTargetWeightWet
-
-            btnDischarge.Enabled = False
-
-            ' Start both tasks asynchronously
-            Await Task.WhenAll(
-            DryMatsBatchingAsync(dryCancellationTokenSource.Token),
-            LiquidMatsBatchingAsync(liquidCancellationTokenSource.Token))
-
-            btnDischarge.Enabled = True
-            CallToast("Auto Batching", "Batching completed. Discharge is now available.")
-        Else
-            If dryCancellationTokenSource IsNot Nothing Then
-                dryCancellationTokenSource.Cancel()
-                dryCancellationTokenSource = Nothing
-            End If
-
-            If liquidCancellationTokenSource IsNot Nothing Then
-                liquidCancellationTokenSource.Cancel()
-                liquidCancellationTokenSource = Nothing
-            End If
-
-            stopBatching()
-            btnDischarge.Enabled = True
-            MsgBox("Batching stopped.")
-        End If
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim currentValue As Integer
-        If Integer.TryParse(TextBox1.Text, currentValue) Then
-            currentValue -= 1
-            TextBox1.Text = currentValue.ToString()
-            binCurrentLoadDry = CDbl(currentValue)
-        Else
-            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End If
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim currentValue As Integer
-        If Integer.TryParse(TextBox1.Text, currentValue) Then
-            currentValue += 1
-            TextBox1.Text = currentValue.ToString()
-            binCurrentLoadDry = CDbl(currentValue)
-        Else
-            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End If
-
-
-
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim currentValue As Integer
-        If Integer.TryParse(TextBox2.Text, currentValue) Then
-            currentValue += 1
-            TextBox2.Text = currentValue.ToString()
-            binCurrentLoadWet = CDbl(currentValue)
-        Else
-            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End If
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim currentValue As Integer
-        If Integer.TryParse(TextBox2.Text, currentValue) Then
-            currentValue -= 1
-            TextBox2.Text = currentValue.ToString()
-            binCurrentLoadWet = CDbl(currentValue)
-        Else
-            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End If
-    End Sub
-
-    Private Sub tmrUiUpdate_Tick(sender As Object, e As EventArgs) Handles tmrUiUpdate.Tick
-        UpdateUI()
-    End Sub
-
-    Private Sub btnDischarge_Click(sender As Object, e As EventArgs) Handles btnDischarge.Click
-        If BatchGateStatus = False Then
-            BatchGateStatus = True
-            commandPLC(8) = True
-            commandPLC(12) = True
-
-            btnDischarge.color = Color.Firebrick
-            btnStartStopBatching.Enabled = False
-            btnTopGate.Enabled = False
-        Else
-            BatchGateStatus = False
-            commandPLC(8) = False
-            commandPLC(12) = False
-
-            btnDischarge.color = Color.SeaGreen
-            btnStartStopBatching.Enabled = True
-            btnTopGate.Enabled = True
-        End If
-    End Sub
-
-    Private Sub btnTopGate_Click(sender As Object, e As EventArgs) Handles btnTopGate.Click
-        If TopGateStatus = False Then
-            TopGateStatus = True
-            commandPLC(13) = True
-            btnBottomGate.Enabled = False
-            btnDischarge.Enabled = False
-        Else
-            TopGateStatus = False
-            commandPLC(13) = False
-            btnBottomGate.Enabled = True
-            btnDischarge.Enabled = True
-        End If
-    End Sub
-
-    Private Sub btnBottomGate_Click(sender As Object, e As EventArgs) Handles btnBottomGate.Click
-        If BottomGateStatus = False Then
-            BottomGateStatus = True
-            commandPLC(14) = True
-            btnTopGate.Enabled = False
-            'btnDischarge.Enabled = False
-        Else
-            BottomGateStatus = False
-            commandPLC(14) = False
-            btnTopGate.Enabled = True
-            'btnDischarge.Enabled = True
-        End If
-    End Sub
 
     Private Sub cmbFormula_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFormula.SelectedIndexChanged
         Console.WriteLine(cmbFormula.SelectedValue)
@@ -411,7 +242,6 @@ Public Class Form1
                                     formulaList.Find(Function(name) name.FormulaName = cmbFormula.Text).Molasses,
                                     formulaList.Find(Function(name) name.FormulaName = cmbFormula.Text).CocoOil)
 
-        Console.WriteLine(currentFormula.FormulaName)
         lblFormulaId.Text = currentFormula.Id
         txtbFormulaName.Text = currentFormula.FormulaName
         txtbSilo1Weight.Text = currentFormula.Silo1
@@ -424,81 +254,6 @@ Public Class Form1
         txtbSilo8Weight.Text = currentFormula.Silo8
         txtbMolassesWeight.Text = currentFormula.Molasses
         txtbCocoOilWeight.Text = currentFormula.CocoOil
-    End Sub
-
-    Sub connectPLC()
-        Try
-            If (IF_Connected = False) Then
-                IF_Connected = True
-                srlPLC = New SerialPort("COM4", 9600, Parity.None, 8, 1)
-                srlPLC.Open() 'Open 
-                Master_Station = ModbusSerialMaster.CreateRtu(srlPLC)
-                Master_Station.Transport.ReadTimeout = 500
-                Master_Station.Transport.WriteTimeout = 500
-                Master_Station.Transport.Retries = 0
-                tmrPLC.Start()
-                'ถ้า เชื่อมต่อไม่ได้
-            ElseIf (IF_Connected = True) Then
-                IF_Connected = False
-                tmrPLC.Stop()
-                srlPLC.Close() 'Close COM port
-            End If
-        Catch ex As Exception
-            'ReportError(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub receivedText(ByVal [text] As String)
-        If Me.lblCurrentWeightDryBatching.InvokeRequired Then
-            Dim x As New SetTextCallback(AddressOf receivedText)
-            Me.Invoke(x, New Object() {(text)})
-        Else
-            Dim revString As String = [text]
-            Dim clean As String
-            clean = revString.Replace("=", "")
-            weight = clean
-            Try
-                binCurrentLoadDry = CDbl(clean)
-            Catch ex As Exception
-
-            End Try
-
-
-            Try
-                Me.lblCurrentWeightDryBatching.Text = CStr(binCurrentLoadDry) + " KG" 'append text
-            Catch ex As Exception
-
-            End Try
-
-        End If
-    End Sub
-
-    Private Sub conLiquidScale_DataReceived(sender As System.Object, e As System.IO.Ports.SerialDataReceivedEventArgs) Handles srlLiquidScale.DataReceived
-        receivedTextliquid(srlLiquidScale.ReadExisting())
-    End Sub
-    Private Sub receivedTextliquid(ByVal [text] As String)
-        If Me.lblCurrentWeightLiquidBatching.InvokeRequired Then
-            Dim x As New SetTextCallback(AddressOf receivedTextliquid)
-            Me.Invoke(x, New Object() {(text)})
-        Else
-            Dim revString As String = [text]
-            Dim clean As String
-            clean = revString.Replace("=", "")
-            weightLiquid = clean
-            Try
-                binCurrentLoadWet = CDbl(clean)
-            Catch ex As Exception
-
-            End Try
-
-            Try
-                Me.lblCurrentWeightLiquidBatching.Text = CStr(binCurrentLoadWet) + " KG" 'append text
-            Catch ex As Exception
-
-            End Try
-
-        End If
     End Sub
 
     Private Sub btnAddFormula_Click(sender As Object, e As EventArgs) Handles btnAddFormula.Click
@@ -555,25 +310,260 @@ Public Class Form1
         End Try
     End Sub
 
+    ' Batching Functions
+    Private Async Sub btnStartStopBatching_Click(sender As Object, e As EventArgs) Handles btnStartStopBatching.Click
+        If dryCancellationTokenSource Is Nothing AndAlso liquidCancellationTokenSource Is Nothing Then
+            dryCancellationTokenSource = New CancellationTokenSource()
+            liquidCancellationTokenSource = New CancellationTokenSource()
 
-    Sub read()
-        Try
-            If (IF_Connected = False) Then
-                IF_Connected = True
-                srlPLC.PortName = My.Settings.ComPortPLC
-                srlPLC = New SerialPort(My.Settings.ComPortPLC, 9600, Parity.None, 8, StopBits.One)
-                srlPLC.Open()
-                Master_Station = ModbusSerialMaster.CreateRtu(srlPLC)
-                Master_Station.Transport.ReadTimeout = 300
-            ElseIf (IF_Connected = True) Then
-                pbPLC.Image = My.Resources.CONNECTED
+            statusDry = 1
+            statusWet = 1
+            currentTargetWeightDry = currentFormulaBatching.Silo1
+            currentTargetWeightWet = currentFormulaBatching.Molasses
+
+            lblCurrentSilo.Text = "Silo 1"
+            lblCurrentTargetWeightDry.Text = currentTargetWeightDry
+
+            lblCurrentPump.Text = "Coco Oil"
+            lblCurrentTargetWeightLiquid.Text = currentTargetWeightWet
+
+            btnDischarge.Enabled = False
+
+            ' Start both tasks asynchronously
+            Await Task.WhenAll(
+            DryMatsBatchingAsync(dryCancellationTokenSource.Token),
+            LiquidMatsBatchingAsync(liquidCancellationTokenSource.Token))
+
+            btnDischarge.Enabled = True
+            CallToast("Auto Batching", "Batching completed. Discharge is now available.")
+        Else
+            If dryCancellationTokenSource IsNot Nothing Then
+                dryCancellationTokenSource.Cancel()
+                dryCancellationTokenSource = Nothing
             End If
+
+            If liquidCancellationTokenSource IsNot Nothing Then
+                liquidCancellationTokenSource.Cancel()
+                liquidCancellationTokenSource = Nothing
+            End If
+
+            stopBatching()
+            btnDischarge.Enabled = True
+            MsgBox("Batching stopped.")
+        End If
+    End Sub
+
+    Private Sub btnDischarge_Click(sender As Object, e As EventArgs) Handles btnDischarge.Click
+        If BatchGateStatus = False Then
+            BatchGateStatus = True
+            commandPLC(8) = True
+            commandPLC(12) = True
+
+            btnDischarge.color = Color.Firebrick
+            btnStartStopBatching.Enabled = False
+            btnTopGate.Enabled = False
+        Else
+            BatchGateStatus = False
+            commandPLC(8) = False
+            commandPLC(12) = False
+
+            btnDischarge.color = Color.SeaGreen
+            btnStartStopBatching.Enabled = True
+            btnTopGate.Enabled = True
+        End If
+    End Sub
+
+    Private Sub btnTopGate_Click(sender As Object, e As EventArgs) Handles btnTopGate.Click
+        If TopGateStatus = False Then
+            TopGateStatus = True
+            commandPLC(13) = True
+            btnBottomGate.Enabled = False
+            btnDischarge.Enabled = False
+        Else
+            TopGateStatus = False
+            commandPLC(13) = False
+            btnBottomGate.Enabled = True
+            btnDischarge.Enabled = True
+        End If
+    End Sub
+
+    Private Sub btnBottomGate_Click(sender As Object, e As EventArgs) Handles btnBottomGate.Click
+        If BottomGateStatus = False Then
+            BottomGateStatus = True
+            commandPLC(14) = True
+            btnTopGate.Enabled = False
+            'btnDischarge.Enabled = False
+        Else
+            BottomGateStatus = False
+            commandPLC(14) = False
+            btnTopGate.Enabled = True
+            'btnDischarge.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim currentValue As Integer
+        If Integer.TryParse(TextBox1.Text, currentValue) Then
+            currentValue -= 1
+            TextBox1.Text = currentValue.ToString()
+            binCurrentLoadDry = CDbl(currentValue)
+        Else
+            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim currentValue As Integer
+        If Integer.TryParse(TextBox1.Text, currentValue) Then
+            currentValue += 1
+            TextBox1.Text = currentValue.ToString()
+            binCurrentLoadDry = CDbl(currentValue)
+        Else
+            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim currentValue As Integer
+        If Integer.TryParse(TextBox2.Text, currentValue) Then
+            currentValue += 1
+            TextBox2.Text = currentValue.ToString()
+            binCurrentLoadWet = CDbl(currentValue)
+        Else
+            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim currentValue As Integer
+        If Integer.TryParse(TextBox2.Text, currentValue) Then
+            currentValue -= 1
+            TextBox2.Text = currentValue.ToString()
+            binCurrentLoadWet = CDbl(currentValue)
+        Else
+            MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+    Private Async Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        ' Show confirmation message before proceeding
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to close the application?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.No Then
+            Exit Sub ' Cancel exit if the user selects "No"
+        End If
+
+        stopAll()
+        btnExit.Enabled = False ' Disable button to prevent multiple clicks
+        While Not Await AllRegistersFalseAsync()
+            MessageBox.Show("Waiting for all registers to be False before exiting.", "Exit Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Await Task.Delay(1000) ' Wait for 1 second before checking again
+        End While
+        Application.Exit()
+    End Sub
+
+    Private Sub tmrUiUpdate_Tick(sender As Object, e As EventArgs) Handles tmrUiUpdate.Tick
+        UpdateUI()
+    End Sub
+
+    Private Async Function AllRegistersFalseAsync() As Task(Of Boolean)
+        Await Task.Delay(100) ' Simulate asynchronous reading (modify as needed)
+
+        Dim holding_register As Boolean() = Master_Station.ReadCoils(SLAVE_ADDRESS, 0, 20) ' Read holding registers
+
+        ' Check if any value is True
+        For Each value In holding_register
+            If value Then
+                Return False ' Still not ready to exit
+            End If
+        Next
+        Return True ' All values are False, ready to exit
+    End Function
+
+    'Reading of Scales
+
+    Public Sub loadScales()
+        srlDryScale.PortName = "COM5"
+        srlDryScale.BaudRate = "9600"
+
+        srlLiquidScale.PortName = "COM6"
+        srlLiquidScale.BaudRate = "9600"
+
+        Try
+            srlDryScale.Open()
+            ' MsgBox("Connected")
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MsgBox("Please Contact the Administrator" + " " + ex.Message)
+            'btnStartBatching.Enabled = False
+        End Try
+        Try
+            srlLiquidScale.Open()
+            '  MsgBox("Connected")
+        Catch ex As Exception
+            MsgBox("Please Contact the Administrator" + " " + ex.Message)
+            'btnStartBatching.Enabled = False
         End Try
 
     End Sub
 
+    Private Sub conBatchScale_DataReceived(sender As System.Object, e As System.IO.Ports.SerialDataReceivedEventArgs) Handles srlDryScale.DataReceived
+        receivedText(srlDryScale.ReadExisting())
+    End Sub
+
+    Private Sub receivedText(ByVal [text] As String)
+        If Me.lblCurrentWeightDryBatching.InvokeRequired Then
+            Dim x As New SetTextCallback(AddressOf receivedText)
+            Me.Invoke(x, New Object() {(text)})
+        Else
+            Dim revString As String = [text]
+            Dim clean As String
+            clean = revString.Replace("=", "")
+            weight = clean
+            Try
+                binCurrentLoadDry = CDbl(clean)
+            Catch ex As Exception
+
+            End Try
+
+
+            Try
+                Me.lblCurrentWeightDryBatching.Text = CStr(binCurrentLoadDry) + " KG" 'append text
+            Catch ex As Exception
+
+            End Try
+
+        End If
+    End Sub
+
+    Private Sub conLiquidScale_DataReceived(sender As System.Object, e As System.IO.Ports.SerialDataReceivedEventArgs) Handles srlLiquidScale.DataReceived
+        receivedTextliquid(srlLiquidScale.ReadExisting())
+    End Sub
+
+    Private Sub receivedTextliquid(ByVal [text] As String)
+        If Me.lblCurrentWeightLiquidBatching.InvokeRequired Then
+            Dim x As New SetTextCallback(AddressOf receivedTextliquid)
+            Me.Invoke(x, New Object() {(text)})
+        Else
+            Dim revString As String = [text]
+            Dim clean As String
+            clean = revString.Replace("=", "")
+            weightLiquid = clean
+            Try
+                binCurrentLoadWet = CDbl(clean)
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                Me.lblCurrentWeightLiquidBatching.Text = CStr(binCurrentLoadWet) + " KG" 'append text
+            Catch ex As Exception
+
+            End Try
+
+        End If
+    End Sub
+
+    ' Timer Functions
     Private Sub tmrSpray_Tick(sender As Object, e As EventArgs) Handles tmrSpray.Tick
         Dim elapsedTime As TimeSpan = timeSpray.Elapsed
         Dim remainingTime As TimeSpan = targetTimeSpray - elapsedTime
@@ -661,5 +651,11 @@ Public Class Form1
             btnSprayPump.Enabled = False
         End If
 
+    End Sub
+
+    ' Toast Notification
+    Public Sub CallToast(ByVal caption As String, ByVal description As String)
+        Dim toast = New ToastBuilder(Me).SetCaption(caption).SetDescription(description).SetDuration(5000).SetMuting(False).Build()
+        toast.Show()
     End Sub
 End Class

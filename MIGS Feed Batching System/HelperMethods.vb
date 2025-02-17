@@ -245,4 +245,27 @@
         Form1.commandPLC(9) = 0
     End Sub
 
+    Public Sub stopAll()
+        Form1.commandPLC(0) = 0
+        Form1.commandPLC(1) = 0
+        Form1.commandPLC(2) = 0
+        Form1.commandPLC(3) = 0
+        Form1.commandPLC(4) = 0
+        Form1.commandPLC(5) = 0
+        Form1.commandPLC(6) = 0
+        Form1.commandPLC(7) = 0
+        Form1.commandPLC(8) = 0
+        Form1.commandPLC(9) = 0
+        Form1.commandPLC(10) = 0
+        Form1.commandPLC(11) = 0
+        Form1.commandPLC(12) = 0
+        Form1.commandPLC(13) = 0
+        Form1.commandPLC(14) = 0
+        Form1.commandPLC(15) = 0
+        Form1.commandPLC(16) = 0
+        Form1.commandPLC(17) = 0
+        Form1.commandPLC(18) = 0
+        Form1.commandPLC(19) = 0
+    End Sub
+
 End Module

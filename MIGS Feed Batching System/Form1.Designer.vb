@@ -31,6 +31,7 @@ Partial Class Form1
         Me.srlDryScale = New System.IO.Ports.SerialPort(Me.components)
         Me.srlLiquidScale = New System.IO.Ports.SerialPort(Me.components)
         Me.pnlBatching = New System.Windows.Forms.Panel()
+        Me.btnExit = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbFormulaBatching = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -228,6 +229,40 @@ Partial Class Form1
         Me.pnlBatching.Name = "pnlBatching"
         Me.pnlBatching.Size = New System.Drawing.Size(540, 1080)
         Me.pnlBatching.TabIndex = 0
+        '
+        'btnExit
+        '
+        Me.btnExit.Activecolor = System.Drawing.Color.Maroon
+        Me.btnExit.BackColor = System.Drawing.Color.Firebrick
+        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnExit.BorderRadius = 0
+        Me.btnExit.ButtonText = "EXIT"
+        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.DisabledColor = System.Drawing.Color.Gray
+        Me.btnExit.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnExit.Iconimage = Global.MIGS_Feed_Batching_System.My.Resources.Resources._STOP
+        Me.btnExit.Iconimage_right = Nothing
+        Me.btnExit.Iconimage_right_Selected = Nothing
+        Me.btnExit.Iconimage_Selected = Nothing
+        Me.btnExit.IconMarginLeft = 0
+        Me.btnExit.IconMarginRight = 0
+        Me.btnExit.IconRightVisible = True
+        Me.btnExit.IconRightZoom = 0R
+        Me.btnExit.IconVisible = True
+        Me.btnExit.IconZoom = 40.0R
+        Me.btnExit.IsTab = False
+        Me.btnExit.Location = New System.Drawing.Point(434, 1007)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Normalcolor = System.Drawing.Color.Firebrick
+        Me.btnExit.OnHovercolor = System.Drawing.Color.DarkRed
+        Me.btnExit.OnHoverTextColor = System.Drawing.Color.White
+        Me.btnExit.selected = False
+        Me.btnExit.Size = New System.Drawing.Size(91, 48)
+        Me.btnExit.TabIndex = 51
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnExit.Textcolor = System.Drawing.Color.White
+        Me.btnExit.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Label1
         '
@@ -1413,6 +1448,7 @@ Partial Class Form1
         '
         'pnlFormula
         '
+        Me.pnlFormula.Controls.Add(Me.btnExit)
         Me.pnlFormula.Controls.Add(Me.lblFormulaMatSilo8)
         Me.pnlFormula.Controls.Add(Me.lblFormulaMatSilo7)
         Me.pnlFormula.Controls.Add(Me.lblFormulaMatSilo6)
@@ -2201,4 +2237,5 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuFlatButton
 End Class
