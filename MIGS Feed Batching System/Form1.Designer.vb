@@ -31,7 +31,6 @@ Partial Class Form1
         Me.srlDryScale = New System.IO.Ports.SerialPort(Me.components)
         Me.srlLiquidScale = New System.IO.Ports.SerialPort(Me.components)
         Me.pnlBatching = New System.Windows.Forms.Panel()
-        Me.btnExit = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbFormulaBatching = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -54,6 +53,7 @@ Partial Class Form1
         Me.btnDischarge = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnStartStopBatching = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnRefreshFormulaBatching = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnExit = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.pnlDiagram = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -230,40 +230,6 @@ Partial Class Form1
         Me.pnlBatching.Size = New System.Drawing.Size(540, 1080)
         Me.pnlBatching.TabIndex = 0
         '
-        'btnExit
-        '
-        Me.btnExit.Activecolor = System.Drawing.Color.Maroon
-        Me.btnExit.BackColor = System.Drawing.Color.Firebrick
-        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnExit.BorderRadius = 0
-        Me.btnExit.ButtonText = "EXIT"
-        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExit.DisabledColor = System.Drawing.Color.Gray
-        Me.btnExit.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnExit.Iconimage = Global.MIGS_Feed_Batching_System.My.Resources.Resources._STOP
-        Me.btnExit.Iconimage_right = Nothing
-        Me.btnExit.Iconimage_right_Selected = Nothing
-        Me.btnExit.Iconimage_Selected = Nothing
-        Me.btnExit.IconMarginLeft = 0
-        Me.btnExit.IconMarginRight = 0
-        Me.btnExit.IconRightVisible = True
-        Me.btnExit.IconRightZoom = 0R
-        Me.btnExit.IconVisible = True
-        Me.btnExit.IconZoom = 40.0R
-        Me.btnExit.IsTab = False
-        Me.btnExit.Location = New System.Drawing.Point(434, 1007)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Normalcolor = System.Drawing.Color.Firebrick
-        Me.btnExit.OnHovercolor = System.Drawing.Color.DarkRed
-        Me.btnExit.OnHoverTextColor = System.Drawing.Color.White
-        Me.btnExit.selected = False
-        Me.btnExit.Size = New System.Drawing.Size(91, 48)
-        Me.btnExit.TabIndex = 51
-        Me.btnExit.Text = "EXIT"
-        Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnExit.Textcolor = System.Drawing.Color.White
-        Me.btnExit.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
@@ -394,7 +360,7 @@ Partial Class Form1
         Me.lblTimerSprayRemain.Name = "lblTimerSprayRemain"
         Me.lblTimerSprayRemain.Size = New System.Drawing.Size(150, 25)
         Me.lblTimerSprayRemain.TabIndex = 18
-        Me.lblTimerSprayRemain.Text = "Label2"
+        Me.lblTimerSprayRemain.Text = "00:00:00"
         Me.lblTimerSprayRemain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblTimeMixerRemain
@@ -404,7 +370,7 @@ Partial Class Form1
         Me.lblTimeMixerRemain.Name = "lblTimeMixerRemain"
         Me.lblTimeMixerRemain.Size = New System.Drawing.Size(150, 25)
         Me.lblTimeMixerRemain.TabIndex = 17
-        Me.lblTimeMixerRemain.Text = "Label1"
+        Me.lblTimeMixerRemain.Text = "00:00:00"
         Me.lblTimeMixerRemain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtbTimerSpray
@@ -577,6 +543,40 @@ Partial Class Form1
         Me.btnRefreshFormulaBatching.Size = New System.Drawing.Size(144, 80)
         Me.btnRefreshFormulaBatching.TabIndex = 4
         '
+        'btnExit
+        '
+        Me.btnExit.Activecolor = System.Drawing.Color.Maroon
+        Me.btnExit.BackColor = System.Drawing.Color.Firebrick
+        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnExit.BorderRadius = 0
+        Me.btnExit.ButtonText = "EXIT"
+        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.DisabledColor = System.Drawing.Color.Gray
+        Me.btnExit.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnExit.Iconimage = Global.MIGS_Feed_Batching_System.My.Resources.Resources._STOP
+        Me.btnExit.Iconimage_right = Nothing
+        Me.btnExit.Iconimage_right_Selected = Nothing
+        Me.btnExit.Iconimage_Selected = Nothing
+        Me.btnExit.IconMarginLeft = 0
+        Me.btnExit.IconMarginRight = 0
+        Me.btnExit.IconRightVisible = True
+        Me.btnExit.IconRightZoom = 0R
+        Me.btnExit.IconVisible = True
+        Me.btnExit.IconZoom = 40.0R
+        Me.btnExit.IsTab = False
+        Me.btnExit.Location = New System.Drawing.Point(434, 1007)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Normalcolor = System.Drawing.Color.Firebrick
+        Me.btnExit.OnHovercolor = System.Drawing.Color.DarkRed
+        Me.btnExit.OnHoverTextColor = System.Drawing.Color.White
+        Me.btnExit.selected = False
+        Me.btnExit.Size = New System.Drawing.Size(91, 48)
+        Me.btnExit.TabIndex = 51
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnExit.Textcolor = System.Drawing.Color.White
+        Me.btnExit.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'pnlDiagram
         '
         Me.pnlDiagram.BackColor = System.Drawing.Color.Transparent
@@ -667,6 +667,7 @@ Partial Class Form1
         Me.Button3.TabIndex = 72
         Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
         '
         'Button4
         '
@@ -676,6 +677,7 @@ Partial Class Form1
         Me.Button4.TabIndex = 71
         Me.Button4.Text = "Button4"
         Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
         '
         'Button2
         '
@@ -685,6 +687,7 @@ Partial Class Form1
         Me.Button2.TabIndex = 70
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'Button1
         '
@@ -694,6 +697,7 @@ Partial Class Form1
         Me.Button1.TabIndex = 69
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'TextBox2
         '
@@ -702,6 +706,7 @@ Partial Class Form1
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 68
         Me.TextBox2.Text = "0"
+        Me.TextBox2.Visible = False
         '
         'TextBox1
         '
@@ -710,10 +715,12 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 67
         Me.TextBox1.Text = "0"
+        Me.TextBox1.Visible = False
         '
         'pbLiquidGate
         '
         Me.pbLiquidGate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbLiquidGate.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.STOP_1
         Me.pbLiquidGate.Location = New System.Drawing.Point(516, 939)
         Me.pbLiquidGate.Name = "pbLiquidGate"
         Me.pbLiquidGate.Size = New System.Drawing.Size(40, 40)
