@@ -84,7 +84,7 @@ Public Class Form1
         timeMixer = New Stopwatch()
 
         InitializeAddress()
-        connectPLC()
+        'connectPLC()
         ' loadScales()
         tmrUiUpdate.Start()
     End Sub
@@ -225,6 +225,17 @@ Public Class Form1
         lblSilo8WeightBatching.Text = currentFormulaBatching.Silo8
         lblMolassesWeightBatching.Text = currentFormulaBatching.Molasses
         lblCocoOilWeightBatching.Text = currentFormulaBatching.CocoOil
+
+        lblTargetWeightDryBatching.Text = (currentFormulaBatching.Silo1 +
+        currentFormulaBatching.Silo2 +
+        currentFormulaBatching.Silo3 +
+        currentFormulaBatching.Silo4 +
+        currentFormulaBatching.Silo5 +
+        currentFormulaBatching.Silo6 +
+        currentFormulaBatching.Silo7 +
+        currentFormulaBatching.Silo8)
+
+        lblTargetWeightLiquidBatching.Text = (currentFormulaBatching.Molasses + currentFormulaBatching.CocoOil)
     End Sub
 
     Private Sub cmbFormula_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFormula.SelectedIndexChanged
