@@ -84,8 +84,8 @@ Public Class Form1
         timeMixer = New Stopwatch()
 
         InitializeAddress()
-        'connectPLC()
-        ' loadScales()
+        connectPLC()
+        loadScales()
         tmrUiUpdate.Start()
     End Sub
 
@@ -140,7 +140,7 @@ Public Class Form1
         Try
             If (IF_Connected = False) Then
                 IF_Connected = True
-                srlPLC = New SerialPort("COM4", 9600, Parity.None, 8, 1)
+                srlPLC = New SerialPort(My.Settings.ComPortPLC, 9600, Parity.None, 8, 1)
                 srlPLC.Open()
                 Master_Station = ModbusSerialMaster.CreateRtu(srlPLC)
                 Master_Station.Transport.ReadTimeout = 500
@@ -359,6 +359,7 @@ Public Class Form1
             End If
 
             stopBatching()
+            stopAll()
             btnDischarge.Enabled = True
             MsgBox("Batching stopped.")
         End If
@@ -367,7 +368,7 @@ Public Class Form1
     Private Sub btnDischarge_Click(sender As Object, e As EventArgs) Handles btnDischarge.Click
         If BatchGateStatus = False Then
             BatchGateStatus = True
-            commandPLC(8) = True
+            commandPLC(11) = True
             commandPLC(12) = True
 
             btnDischarge.color = Color.Firebrick
@@ -375,7 +376,7 @@ Public Class Form1
             btnTopGate.Enabled = False
         Else
             BatchGateStatus = False
-            commandPLC(8) = False
+            commandPLC(11) = False
             commandPLC(12) = False
 
             btnDischarge.color = Color.SeaGreen
@@ -494,10 +495,10 @@ Public Class Form1
     'Reading of Scales
 
     Public Sub loadScales()
-        srlDryScale.PortName = "COM5"
+        srlDryScale.PortName = My.Settings.ComPortDryScale
         srlDryScale.BaudRate = "9600"
 
-        srlLiquidScale.PortName = "COM6"
+        srlLiquidScale.PortName = My.Settings.ComportLiquidScale
         srlLiquidScale.BaudRate = "9600"
 
         Try
@@ -585,10 +586,10 @@ Public Class Form1
             lblTimerSprayRemain.Text = "00:00:00"
             btnSprayPump.color = Color.SeaGreen
             btnDischarge.Enabled = True
-            commandPLC(9) = 0
+            commandPLC(10) = 0
         Else
             lblTimerSprayRemain.Text = remainingTime.ToString("hh\:mm\:ss")
-            commandPLC(9) = 1
+            commandPLC(10) = 1
         End If
     End Sub
 
@@ -609,7 +610,7 @@ Public Class Form1
             lblTimerSprayRemain.Text = "00:00:00"
             btnSprayPump.color = Color.SeaGreen
             btnDischarge.Enabled = True
-            commandPLC(9) = 0
+            commandPLC(10) = 0
         End If
 
     End Sub

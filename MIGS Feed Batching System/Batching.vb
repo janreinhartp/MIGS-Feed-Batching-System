@@ -156,7 +156,7 @@ Module Batching
         While Not token.IsCancellationRequested
             Select Case statusWet
                 Case 1
-                    Form1.commandPLC(10) = 1
+                    Form1.commandPLC(9) = 1
                     Do
                         If Form1.binCurrentLoadWet >= Form1.currentTargetWeightWet - My.Settings.AdjustmentCocoOil AndAlso Not token.IsCancellationRequested Then
                             Exit Do
@@ -164,7 +164,7 @@ Module Batching
                             Await Task.Delay(100) ' Check every 100ms
                         End If
                     Loop
-                    Form1.commandPLC(10) = 0
+                    Form1.commandPLC(9) = 0
                     Await Task.Delay(1000)
                     Form1.currentTargetWeightWet += CDbl(Form1.currentFormulaBatching.CocoOil)
                     Form1.lblCurrentPump.Text = "Molasses"
@@ -172,7 +172,7 @@ Module Batching
                     statusWet = 2
 
                 Case 2
-                    Form1.commandPLC(11) = 1
+                    Form1.commandPLC(8) = 1
                     Do
                         If Form1.binCurrentLoadWet >= Form1.currentTargetWeightWet - My.Settings.AdjustmentMolasses AndAlso Not token.IsCancellationRequested Then
                             Exit Do
@@ -180,7 +180,7 @@ Module Batching
                             Await Task.Delay(100) ' Check every 100ms
                         End If
                     Loop
-                    Form1.commandPLC(11) = 0
+                    Form1.commandPLC(8) = 0
                     Await Task.Delay(1000)
                     statusWet = 0
                     Form1.CallToast("Auto Batching", "Liquid batching finished!")

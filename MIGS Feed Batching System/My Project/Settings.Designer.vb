@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("COM3")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("COM4")>  _
         Public Property ComPortPLC() As String
             Get
                 Return CType(Me("ComPortPLC"),String)
@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("COM4")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("COM5")>  _
         Public Property ComPortDryScale() As String
             Get
                 Return CType(Me("ComPortDryScale"),String)
@@ -80,7 +80,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("COM5")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("COM6")>  _
         Public Property ComportLiquidScale() As String
             Get
                 Return CType(Me("ComportLiquidScale"),String)
