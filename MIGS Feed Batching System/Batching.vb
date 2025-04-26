@@ -142,11 +142,11 @@ Module Batching
                     Form1.commandPLC(7) = 0
                     Await Task.Delay(1000)
                     statusDry = 0
-                    Form1.CallToast("Auto Batching", "Dry batching finished!")
+                    'Form1.CallToast("Auto Batching", "Dry batching finished!")
                     Exit While
 
                 Case Else
-                    Form1.CallToast("Auto Batching", "Dry batching finished!")
+                    'Form1.CallToast("Auto Batching", "Dry batching finished!")
                     Exit While
             End Select
         End While
@@ -183,11 +183,11 @@ Module Batching
                     Form1.commandPLC(8) = 0
                     Await Task.Delay(1000)
                     statusWet = 0
-                    Form1.CallToast("Auto Batching", "Liquid batching finished!")
+                    'Form1.CallToast("Auto Batching", "Liquid batching finished!")
                     Exit While
 
                 Case Else
-                    Form1.CallToast("Auto Batching", "Liquid batching finished!")
+                    'Form1.CallToast("Auto Batching", "Liquid batching finished!")
                     Exit While
             End Select
         End While
