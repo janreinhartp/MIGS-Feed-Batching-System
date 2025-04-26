@@ -1,14 +1,9 @@
 ﻿
 Imports System.IO.Ports
-Imports System.Net.Mail
 Imports System.Threading
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
+Imports System.UI.Widget
 Imports Google.Protobuf.WellKnownTypes
 Imports Modbus.Device
-Imports Org.BouncyCastle.Tls
-
-Imports System.UI.Widget
 
 Delegate Sub SetTextCallback(ByVal [text] As String)
 Public Class Form1
@@ -58,7 +53,7 @@ Public Class Form1
         bottomgate,
         alarm As UShort
 
-    Public BatchGateStatus, TopGateStatus, BottomGateStatus, MixingStatus, SprayStatus As Boolean
+    Public BatchGateStatus, TopGateStatus, BottomGateStatus, MixingStatus, SprayStatus, BatchingFlag, FormulaSelected As Boolean
 
 
     Public Shared commandPLC(19) As Boolean
@@ -82,7 +77,7 @@ Public Class Form1
 
         timeSpray = New Stopwatch()
         timeMixer = New Stopwatch()
-
+        BatchingFlag = False
         InitializeAddress()
         connectPLC()
         loadScales()
@@ -165,7 +160,7 @@ Public Class Form1
                     Master_Station.WriteSingleCoil(SLAVE_ADDRESS, i, commandPLC(i))
                     recentCommandPLC(i) = commandPLC(i)
                 Catch ex As Exception
-                    ReportError(ex.Message)
+                    'ReportError(ex.Message)
                 End Try
             End If
         Next
@@ -191,7 +186,7 @@ Public Class Form1
                 inputPLC(i) = Convert.ToBoolean(input_register(i))
             Next
         Catch ex As Exception
-            ReportError(ex.Message)
+            ' ReportError(ex.Message)
         End Try
     End Sub
 
@@ -236,6 +231,7 @@ Public Class Form1
         currentFormulaBatching.Silo8)
 
         lblTargetWeightLiquidBatching.Text = (currentFormulaBatching.Molasses + currentFormulaBatching.CocoOil)
+        FormulaSelected = True
     End Sub
 
     Private Sub cmbFormula_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFormula.SelectedIndexChanged
@@ -323,7 +319,16 @@ Public Class Form1
 
     ' Batching Functions
     Private Async Sub btnStartStopBatching_Click(sender As Object, e As EventArgs) Handles btnStartStopBatching.Click
+
+        If Not BatchingFlag Then
+            If (binCurrentLoadDry <> 0 AndAlso binCurrentLoadWet <> 0) OrElse FormulaSelected = False Then
+                MsgBox("Cannot start batching: Scales must have value and formula must exist.")
+                Exit Sub
+            End If
+        End If
+
         If dryCancellationTokenSource Is Nothing AndAlso liquidCancellationTokenSource Is Nothing Then
+
             dryCancellationTokenSource = New CancellationTokenSource()
             liquidCancellationTokenSource = New CancellationTokenSource()
 
@@ -339,14 +344,26 @@ Public Class Form1
             lblCurrentTargetWeightLiquid.Text = currentTargetWeightWet
 
             btnDischarge.Enabled = False
-
+            BatchingFlag = True
             ' Start both tasks asynchronously
             Await Task.WhenAll(
             DryMatsBatchingAsync(dryCancellationTokenSource.Token),
             LiquidMatsBatchingAsync(liquidCancellationTokenSource.Token))
 
             btnDischarge.Enabled = True
-            CallToast("Auto Batching", "Batching completed. Discharge is now available.")
+
+            If dryCancellationTokenSource IsNot Nothing Then
+                dryCancellationTokenSource.Cancel()
+                dryCancellationTokenSource = Nothing
+            End If
+
+            If liquidCancellationTokenSource IsNot Nothing Then
+                liquidCancellationTokenSource.Cancel()
+                liquidCancellationTokenSource = Nothing
+            End If
+            BatchingFlag = False
+            stopBatching()
+            'CallToast("Auto Batching", "Batching completed. Discharge is now available.")
         Else
             If dryCancellationTokenSource IsNot Nothing Then
                 dryCancellationTokenSource.Cancel()
@@ -359,7 +376,7 @@ Public Class Form1
             End If
 
             stopBatching()
-            stopAll()
+            BatchingFlag = False
             btnDischarge.Enabled = True
             MsgBox("Batching stopped.")
         End If

@@ -106,3 +106,7 @@ C:\Users\MasterMix Feedmill\source\repos\MIGS-Feed-Batching-System\MIGS Feed Bat
 C:\Users\MasterMix Feedmill\source\repos\MIGS-Feed-Batching-System\MIGS Feed Batching System\bin\Debug\MIGS Feed Batching System.application
 C:\Users\MasterMix Feedmill\source\repos\MIGS-Feed-Batching-System\MIGS Feed Batching System\obj\Debug\MIGS Feed Batching System.exe.manifest
 C:\Users\MasterMix Feedmill\source\repos\MIGS-Feed-Batching-System\MIGS Feed Batching System\obj\Debug\MIGS Feed Batching System.application
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\bin\Debug\MIGS Feed Batching System.exe.manifest
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\bin\Debug\MIGS Feed Batching System.application
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\obj\Debug\MIGS Feed Batching System.exe.manifest
+C:\Users\janre\source\repos\MIGS Feed Batching System\MIGS Feed Batching System\obj\Debug\MIGS Feed Batching System.application

@@ -34,12 +34,6 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbFormulaBatching = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtbDryScaleStatus = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.pbLiquidScaleStatus = New System.Windows.Forms.PictureBox()
-        Me.pbDryScaleStatus = New System.Windows.Forms.PictureBox()
-        Me.pbPLC = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblTimerSprayRemain = New System.Windows.Forms.Label()
@@ -172,10 +166,6 @@ Partial Class Form1
         Me.tmrSpray = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMixer = New System.Windows.Forms.Timer(Me.components)
         Me.pnlBatching.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.pbLiquidScaleStatus, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbDryScaleStatus, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbPLC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlDiagram.SuspendLayout()
         CType(Me.pbLiquidGate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCocoOil, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,83 +245,11 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.SeaGreen
-        Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.txtbDryScaleStatus)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.pbLiquidScaleStatus)
-        Me.Panel1.Controls.Add(Me.pbDryScaleStatus)
-        Me.Panel1.Controls.Add(Me.pbPLC)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 965)
+        Me.Panel1.Location = New System.Drawing.Point(0, 1007)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(540, 115)
+        Me.Panel1.Size = New System.Drawing.Size(540, 73)
         Me.Panel1.TabIndex = 22
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(357, 25)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(188, 20)
-        Me.Label8.TabIndex = 26
-        Me.Label8.Text = "LIQUID SCALE STATUS"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'txtbDryScaleStatus
-        '
-        Me.txtbDryScaleStatus.AutoSize = True
-        Me.txtbDryScaleStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtbDryScaleStatus.ForeColor = System.Drawing.Color.White
-        Me.txtbDryScaleStatus.Location = New System.Drawing.Point(172, 25)
-        Me.txtbDryScaleStatus.Name = "txtbDryScaleStatus"
-        Me.txtbDryScaleStatus.Size = New System.Drawing.Size(168, 20)
-        Me.txtbDryScaleStatus.TabIndex = 25
-        Me.txtbDryScaleStatus.Text = "DRY SCALE STATUS"
-        Me.txtbDryScaleStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(28, 25)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(106, 20)
-        Me.Label6.TabIndex = 24
-        Me.Label6.Text = "PLC STATUS"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'pbLiquidScaleStatus
-        '
-        Me.pbLiquidScaleStatus.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
-        Me.pbLiquidScaleStatus.Location = New System.Drawing.Point(424, 50)
-        Me.pbLiquidScaleStatus.Name = "pbLiquidScaleStatus"
-        Me.pbLiquidScaleStatus.Size = New System.Drawing.Size(40, 40)
-        Me.pbLiquidScaleStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbLiquidScaleStatus.TabIndex = 23
-        Me.pbLiquidScaleStatus.TabStop = False
-        '
-        'pbDryScaleStatus
-        '
-        Me.pbDryScaleStatus.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
-        Me.pbDryScaleStatus.Location = New System.Drawing.Point(228, 50)
-        Me.pbDryScaleStatus.Name = "pbDryScaleStatus"
-        Me.pbDryScaleStatus.Size = New System.Drawing.Size(40, 40)
-        Me.pbDryScaleStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbDryScaleStatus.TabIndex = 22
-        Me.pbDryScaleStatus.TabStop = False
-        '
-        'pbPLC
-        '
-        Me.pbPLC.Image = Global.MIGS_Feed_Batching_System.My.Resources.Resources.DISCONNECTED
-        Me.pbPLC.Location = New System.Drawing.Point(58, 50)
-        Me.pbPLC.Name = "pbPLC"
-        Me.pbPLC.Size = New System.Drawing.Size(40, 40)
-        Me.pbPLC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbPLC.TabIndex = 21
-        Me.pbPLC.TabStop = False
         '
         'Label3
         '
@@ -886,9 +804,9 @@ Partial Class Form1
         '
         Me.Label65.BackColor = System.Drawing.Color.Transparent
         Me.Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label65.Location = New System.Drawing.Point(423, 795)
+        Me.Label65.Location = New System.Drawing.Point(369, 792)
         Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(183, 35)
+        Me.Label65.Size = New System.Drawing.Size(206, 35)
         Me.Label65.TabIndex = 51
         Me.Label65.Text = "TARGET WEIGHT:"
         Me.Label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -897,9 +815,9 @@ Partial Class Form1
         '
         Me.Label66.BackColor = System.Drawing.Color.Transparent
         Me.Label66.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label66.Location = New System.Drawing.Point(391, 734)
+        Me.Label66.Location = New System.Drawing.Point(368, 731)
         Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(213, 61)
+        Me.Label66.Size = New System.Drawing.Size(238, 61)
         Me.Label66.TabIndex = 50
         Me.Label66.Text = "CURRENT WEIGHT: "
         Me.Label66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1084,7 +1002,7 @@ Partial Class Form1
         '
         Me.lblTargetWeightLiquidBatching.BackColor = System.Drawing.Color.Transparent
         Me.lblTargetWeightLiquidBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTargetWeightLiquidBatching.Location = New System.Drawing.Point(610, 795)
+        Me.lblTargetWeightLiquidBatching.Location = New System.Drawing.Point(588, 792)
         Me.lblTargetWeightLiquidBatching.Name = "lblTargetWeightLiquidBatching"
         Me.lblTargetWeightLiquidBatching.Size = New System.Drawing.Size(178, 35)
         Me.lblTargetWeightLiquidBatching.TabIndex = 35
@@ -1095,7 +1013,7 @@ Partial Class Form1
         '
         Me.lblCurrentWeightLiquidBatching.BackColor = System.Drawing.Color.Transparent
         Me.lblCurrentWeightLiquidBatching.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCurrentWeightLiquidBatching.Location = New System.Drawing.Point(610, 734)
+        Me.lblCurrentWeightLiquidBatching.Location = New System.Drawing.Point(606, 731)
         Me.lblCurrentWeightLiquidBatching.Name = "lblCurrentWeightLiquidBatching"
         Me.lblCurrentWeightLiquidBatching.Size = New System.Drawing.Size(178, 61)
         Me.lblCurrentWeightLiquidBatching.TabIndex = 34
@@ -2069,11 +1987,6 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.pnlBatching.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.pbLiquidScaleStatus, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbDryScaleStatus, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbPLC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlDiagram.ResumeLayout(False)
         Me.pnlDiagram.PerformLayout()
         CType(Me.pbLiquidGate, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2203,12 +2116,6 @@ Partial Class Form1
     Friend WithEvents Label66 As Label
     Friend WithEvents tmrUiUpdate As Timer
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents pbPLC As PictureBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtbDryScaleStatus As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents pbLiquidScaleStatus As PictureBox
-    Friend WithEvents pbDryScaleStatus As PictureBox
     Friend WithEvents tmrSpray As Timer
     Friend WithEvents tmrMixer As Timer
     Friend WithEvents cmbFormulaBatching As ComboBox
