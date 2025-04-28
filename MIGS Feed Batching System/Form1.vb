@@ -363,6 +363,7 @@ Public Class Form1
             End If
             BatchingFlag = False
             stopBatching()
+            MsgBox("Auto Batching", "Batching completed. Discharge is now available.")
             'CallToast("Auto Batching", "Batching completed. Discharge is now available.")
         Else
             If dryCancellationTokenSource IsNot Nothing Then
@@ -474,20 +475,8 @@ Public Class Form1
         End If
     End Sub
 
-    Private Async Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         ' Show confirmation message before proceeding
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to close the application?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-        If result = DialogResult.No Then
-            Exit Sub ' Cancel exit if the user selects "No"
-        End If
-
-        stopAll()
-        btnExit.Enabled = False ' Disable button to prevent multiple clicks
-        While Not Await AllRegistersFalseAsync()
-            MessageBox.Show("Waiting for all registers to be False before exiting.", "Exit Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Await Task.Delay(1000) ' Wait for 1 second before checking again
-        End While
         Application.Exit()
     End Sub
 

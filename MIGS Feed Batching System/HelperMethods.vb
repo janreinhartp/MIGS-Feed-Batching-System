@@ -189,27 +189,27 @@
         End If
 
         If Form1.recentCommandPLC(8) = True Then
-            Form1.pbBatchGate.Image = My.Resources.RUN
-        Else
-            Form1.pbBatchGate.Image = My.Resources.STOP_1
-        End If
-
-        If Form1.recentCommandPLC(9) = True Then
-            Form1.pbSprayPump.Image = My.Resources.RUN
-        Else
-            Form1.pbSprayPump.Image = My.Resources.STOP_1
-        End If
-
-        If Form1.recentCommandPLC(10) = True Then
             Form1.pbMolasses.Image = My.Resources.RUN
         Else
             Form1.pbMolasses.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(11) = True Then
+        If Form1.recentCommandPLC(9) = True Then
             Form1.pbCocoOil.Image = My.Resources.RUN
         Else
             Form1.pbCocoOil.Image = My.Resources.STOP_1
+        End If
+
+        If Form1.recentCommandPLC(10) = True Then
+            Form1.pbSprayPump.Image = My.Resources.RUN
+        Else
+            Form1.pbSprayPump.Image = My.Resources.STOP_1
+        End If
+
+        If Form1.recentCommandPLC(11) = True Then
+            Form1.pbBatchGate.Image = My.Resources.RUN
+        Else
+            Form1.pbBatchGate.Image = My.Resources.STOP_1
         End If
 
         If Form1.recentCommandPLC(12) = True Then

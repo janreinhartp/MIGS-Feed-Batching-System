@@ -1057,9 +1057,9 @@ Partial Class Form1
         '
         Me.Label32.BackColor = System.Drawing.Color.Transparent
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(592, 931)
+        Me.Label32.Location = New System.Drawing.Point(586, 931)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(74, 23)
+        Me.Label32.Size = New System.Drawing.Size(92, 23)
         Me.Label32.TabIndex = 28
         Me.Label32.Text = "MOLASSES"
         Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
