@@ -186,7 +186,7 @@ Public Class Form1
                 inputPLC(i) = Convert.ToBoolean(input_register(i))
             Next
         Catch ex As Exception
-            ' ReportError(ex.Message)
+            'ReportError(ex.Message)
         End Try
     End Sub
 
@@ -363,7 +363,7 @@ Public Class Form1
             End If
             BatchingFlag = False
             stopBatching()
-            MsgBox("Auto Batching", "Batching completed. Discharge is now available.")
+            MsgBox("Batching completed. Discharge is now available.")
             'CallToast("Auto Batching", "Batching completed. Discharge is now available.")
         Else
             If dryCancellationTokenSource IsNot Nothing Then
