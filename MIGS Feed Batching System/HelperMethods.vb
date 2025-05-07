@@ -140,91 +140,91 @@
 
 
     Public Sub UpdateUI()
-        If Form1.recentCommandPLC(0) = True Then
+        If Form1.commandPLC(0) = True Then
             Form1.pbSilo1.Image = My.Resources.RUN
         Else
             Form1.pbSilo1.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(1) = True Then
+        If Form1.commandPLC(1) = True Then
             Form1.pbSilo2.Image = My.Resources.RUN
         Else
             Form1.pbSilo2.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(2) = True Then
+        If Form1.commandPLC(2) = True Then
             Form1.pbSilo3.Image = My.Resources.RUN
         Else
             Form1.pbSilo3.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(3) = True Then
+        If Form1.commandPLC(3) = True Then
             Form1.pbSilo4.Image = My.Resources.RUN
         Else
             Form1.pbSilo4.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(4) = True Then
+        If Form1.commandPLC(4) = True Then
             Form1.pbSilo5.Image = My.Resources.RUN
         Else
             Form1.pbSilo5.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(5) = True Then
+        If Form1.commandPLC(5) = True Then
             Form1.pbSilo6.Image = My.Resources.RUN
         Else
             Form1.pbSilo6.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(6) = True Then
+        If Form1.commandPLC(6) = True Then
             Form1.pbSilo7.Image = My.Resources.RUN
         Else
             Form1.pbSilo7.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(7) = True Then
+        If Form1.commandPLC(7) = True Then
             Form1.pbSilo8.Image = My.Resources.RUN
         Else
             Form1.pbSilo8.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(8) = True Then
+        If Form1.commandPLC(8) = True Then
             Form1.pbMolasses.Image = My.Resources.RUN
         Else
             Form1.pbMolasses.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(9) = True Then
+        If Form1.commandPLC(9) = True Then
             Form1.pbCocoOil.Image = My.Resources.RUN
         Else
             Form1.pbCocoOil.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(10) = True Then
+        If Form1.commandPLC(10) = True Then
             Form1.pbSprayPump.Image = My.Resources.RUN
         Else
             Form1.pbSprayPump.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(11) = True Then
+        If Form1.commandPLC(11) = True Then
             Form1.pbBatchGate.Image = My.Resources.RUN
         Else
             Form1.pbBatchGate.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(12) = True Then
+        If Form1.commandPLC(12) = True Then
             Form1.pbLiquidGate.Image = My.Resources.RUN
         Else
             Form1.pbLiquidGate.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(13) = True Then
+        If Form1.commandPLC(13) = True Then
             Form1.pbTopGate.Image = My.Resources.RUN
         Else
             Form1.pbTopGate.Image = My.Resources.STOP_1
         End If
 
-        If Form1.recentCommandPLC(14) = True Then
+        If Form1.commandPLC(14) = True Then
             Form1.pbBottomGate.Image = My.Resources.RUN
         Else
             Form1.pbBottomGate.Image = My.Resources.STOP_1

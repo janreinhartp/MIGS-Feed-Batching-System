@@ -155,14 +155,12 @@ Public Class Form1
 
     Public Sub writeCoils()
         For i As Integer = 0 To 19
-            If commandPLC(i) <> recentCommandPLC(i) Then
-                Try
-                    Master_Station.WriteSingleCoil(SLAVE_ADDRESS, i, commandPLC(i))
-                    recentCommandPLC(i) = commandPLC(i)
-                Catch ex As Exception
-                    'ReportError(ex.Message)
-                End Try
-            End If
+            Try
+                Master_Station.WriteSingleCoil(SLAVE_ADDRESS, i, commandPLC(i))
+                'recentCommandPLC(i) = commandPLC(i)
+            Catch ex As Exception
+                'ReportError(ex.Message)
+            End Try
         Next
     End Sub
 
@@ -173,21 +171,21 @@ Public Class Form1
     Private Sub tmrPLC_Tick(sender As Object, e As EventArgs) Handles tmrPLC.Tick
         writeCoils()
 
-        Try
-            Dim holding_register As Boolean() = Master_Station.ReadCoils(SLAVE_ADDRESS, 0, 20) ' Read holding FC03
+        'Try
+        'Dim holding_register As Boolean() = Master_Station.ReadCoils(SLAVE_ADDRESS, 0, 20) ' Read holding FC03
 
-            For i As Integer = 0 To 19
-                recentCommandPLC(i) = Convert.ToBoolean(holding_register(i))
-            Next
+        'For i As Integer = 0 To 19
+        'rec'entCommandPLC(i) = Convert.ToBoolean(holding_register(i))
+        ' Next
 
-            Dim input_register As Boolean() = Master_Station.ReadCoils(SLAVE_ADDRESS, 20, 20) ' Read holding FC03
+        ' Dim input_register As Boolean() = Master_Station.ReadCoils(SLAVE_ADDRESS, 20, 20) ' Read holding FC03
 
-            For i As Integer = 0 To 19
-                inputPLC(i) = Convert.ToBoolean(input_register(i))
-            Next
-        Catch ex As Exception
-            'ReportError(ex.Message)
-        End Try
+        'For i As Integer = 0 To 19
+        '  inputPLC(i) = Convert.ToBoolean(input_register(i))
+        ' Next '
+        'Catch ex As Exception
+        'ReportError(ex.Message)
+        ' End Try
     End Sub
 
     ' Formula Functions
