@@ -189,6 +189,7 @@ Partial Class Form1
         '
         'tmrPLC
         '
+        Me.tmrPLC.Interval = 250
         '
         'srlDryScale
         '
